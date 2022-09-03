@@ -1,0 +1,9 @@
+src/assets/*
+.jest
+dist
+yarn.lock
+.gitignore
+.eslintignore
+.gitattributes
+coverage
+.tsBuildInfoFile

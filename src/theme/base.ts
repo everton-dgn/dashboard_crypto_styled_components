@@ -11,6 +11,6 @@ export const columns = {
 }
 
 export const borderRadius = {
-  s: '2px',
-  m: '4px'
+  m: '8px',
+  l: '20px'
 }

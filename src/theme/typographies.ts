@@ -2,14 +2,16 @@ export const fonts = {
   family:
     "'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   weights: {
+    light: 300,
     regular: 400,
-    medium: 500,
-    extraBold: 800
+    medium: 500
   },
   sizes: {
-    headline: '24px',
-    paragraphHighlight: '14px',
-    paragraph: '14px',
-    caption: '12px'
+    text1: '18px',
+    text2: '16px',
+    text3: '15px',
+    text4: '14px',
+    text5: '13px',
+    text6: '12px'
   }
 }

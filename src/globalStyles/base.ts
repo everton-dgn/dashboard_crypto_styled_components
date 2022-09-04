@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { ColorsTheme } from './colors'
 import T from 'theme'
 
 export const GlobalStyles = createGlobalStyle`
@@ -28,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
   html,
   #root {
     background-color: ${T.colors.white};
-    color: ${T.colors.black};
+    color: ${T.colors.textPrimary};
   }
 
   p, h1, h2, h3, h4, h5, h6 {
@@ -84,4 +85,6 @@ export const GlobalStyles = createGlobalStyle`
     scrollbar-color: ${T.colors.grey} ${T.colors.white} !important;
     scrollbar-width: 1.6rem !important;
   }
+
+  ${ColorsTheme}
 `

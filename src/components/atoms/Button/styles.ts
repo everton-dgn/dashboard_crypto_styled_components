@@ -5,19 +5,19 @@ import { BtnProps } from './types'
 const SizesBtn = {
   medium: css`
     height: min-content;
-    font-size: ${T.fonts.sizes.caption[0]};
+    font-size: ${T.fonts.sizes.text2};
     padding: 12px;
-    font-weight: ${T.fonts.weights.extraBold};
+    font-weight: ${T.fonts.weights.medium};
     max-width: 224px;
   `
 }
 
 const ColorsBtn = {
   blue: css`
-    background-color: ${T.colors.brandDark};
+    background-color: ${T.colors.lightBlue};
 
     &:hover {
-      background-color: ${T.colors.brandPure};
+      background-color: ${T.colors.darkGrey};
     }
   `
 }
@@ -54,7 +54,7 @@ export const Container = styled.button<BtnProps>`
 
     &:focus {
       border: 1px solid ${T.colors.white};
-      box-shadow: 0 0 0 1px ${T.colors.black};
+      box-shadow: 0 0 0 1px ${T.colors.darkGrey};
     }
 
     &:active {

@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
   select,
   textarea,
   button {
-    font: ${T.fonts.weights.medium} ${T.fonts.sizes.paragraph} Montserrat, sans-serif;
+    font: ${T.fonts.weights.medium} ${T.fonts.sizes.text2} Montserrat, sans-serif;
   }
 
   button {

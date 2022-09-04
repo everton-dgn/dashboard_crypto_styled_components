@@ -1,6 +1,8 @@
 export const colors = {
   primary: '#00e0ff',
-  background: 'var(--colors-background)',
+  backgroundPage: 'var(--colors-background-page)',
+  backgroundCard: 'var(--colors-background-card)',
+  backgroundHighlight: 'linear-gradient(276.8deg, #00E0FF 17%, #0061FF 131%)',
   grey: '#798eae',
   lightGrey: '#c9d2df',
   darkGrey: '#364763',

@@ -1,4 +1,3 @@
-import { gradients } from './gradients'
 import { breakpoints } from './breakpoints'
 import { colors } from './colors'
 import { spacings } from './spacings'
@@ -8,7 +7,6 @@ import { borderRadius, grid, columns } from './base'
 
 const T = {
   colors,
-  gradients,
   fonts,
   spacings,
   breakpoints,

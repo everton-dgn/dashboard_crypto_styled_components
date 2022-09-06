@@ -16,7 +16,6 @@ describe('[Component] Typography', () => {
     const headline = screen.getByRole('heading', { name: 'Text of example' })
     expect(headline).toBeInTheDocument()
     expect(headline).toHaveStyle({
-      fontSize: T.fonts.sizes.headline,
       fontWeight: T.fonts.weights.medium,
       lineHeight: '29px'
     })
@@ -28,7 +27,6 @@ describe('[Component] Typography', () => {
     )
     const paragraphHighlight = screen.getByText('Text of example')
     expect(paragraphHighlight).toHaveStyle({
-      fontSize: T.fonts.sizes.paragraphHighlight,
       fontWeight: T.fonts.weights.medium,
       lineHeight: '17px'
     })
@@ -38,7 +36,6 @@ describe('[Component] Typography', () => {
     renderWithProviders(<Typography text="Text of example" type="paragraph" />)
     const paragraph = screen.getByText('Text of example')
     expect(paragraph).toHaveStyle({
-      fontSize: T.fonts.sizes.paragraph,
       fontWeight: T.fonts.weights.regular,
       lineHeight: '17px'
     })
@@ -48,7 +45,6 @@ describe('[Component] Typography', () => {
     renderWithProviders(<Typography text="Text of example" type="caption" />)
     const caption = screen.getByText('Text of example')
     expect(caption).toHaveStyle({
-      fontSize: T.fonts.sizes.caption,
       fontWeight: T.fonts.weights.regular,
       lineHeight: '16px'
     })
@@ -58,7 +54,6 @@ describe('[Component] Typography', () => {
     renderWithProviders(<Typography text="Text of example" type="caption" />)
     const text = screen.getByText('Text of example')
     expect(text).toHaveStyle({
-      color: T.colors.black,
       textAlign: 'center',
       justifyContent: 'center'
     })
@@ -75,7 +70,6 @@ describe('[Component] Typography', () => {
     )
     const text = screen.getByText('Text of example')
     expect(text).toHaveStyle({
-      color: T.colors.error,
       textAlign: 'left',
       justifyContent: 'left'
     })

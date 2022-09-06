@@ -1,46 +1,20 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import T from 'theme'
-import { Align, Color, Typography } from './types'
+import { Align, Weight, Typography } from './types'
 
-const typography = {
-  headline: css`
-    font-size: ${T.fonts.sizes.headline};
-    font-weight: ${T.fonts.weights.medium};
-    line-height: 29px;
-  `,
-  paragraphHighlight: css`
-    font-size: ${T.fonts.sizes.paragraphHighlight};
-    font-weight: ${T.fonts.weights.medium};
-    line-height: 17px;
-  `,
-  paragraph: css`
-    font-size: ${T.fonts.sizes.paragraph};
-    font-weight: ${T.fonts.weights.regular};
-    line-height: 17px;
-  `,
-  caption: css`
-    font-size: ${T.fonts.sizes.caption};
-    font-weight: ${T.fonts.weights.regular};
-    line-height: 16px;
-  `
-}
-
-const textColor = {
-  black: css`
-    color: ${T.colors.black};
-  `,
-  error: css`
-    color: ${T.colors.error};
-  `
-}
-
-export const Text = styled.p<{ align: Align; type: Typography; color: Color }>`
+export const Text = styled.p<{
+  align?: Align
+  weight?: Weight
+  color?: string
+  type: Typography
+}>`
   display: flex;
   width: 100%;
-  text-align: ${({ align }) => align};
+  text-align: ${({ align }) => align || 'left'};
   justify-content: ${({ align }) => align};
   padding: 0;
   margin: 0;
-  ${({ type }) => typography[type]}}
-  ${({ color }) => textColor[color]}}
+  font-weight: ${({ weight }) => weight || T.fonts.weights.regular};
+  color: ${({ color }) => color || T.colors.textPrimary};
+  font-size: ${({ type }) => T.fonts.sizes[type]};
 `

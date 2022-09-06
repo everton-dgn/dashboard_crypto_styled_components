@@ -36,13 +36,13 @@ module.exports = {
       '@swc/jest',
       { jsc: { transform: { react: { runtime: 'automatic' } } } }
     ]
-  },
-  coverageThreshold: {
-    global: {
-      branches: 85,
-      functions: 85,
-      lines: 85,
-      statements: -10
-    }
   }
+  // coverageThreshold: {
+  //  global: {
+  //    branches: 85,
+  //    functions: 85,
+  //    lines: 85,
+  //    statements: -10
+  //  }
+  // }
 }

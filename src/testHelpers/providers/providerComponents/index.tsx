@@ -1,6 +1,11 @@
-import { ReactNode } from 'react'
 import { render, RenderResult } from '@testing-library/react'
+import { ReactNode } from 'react'
 import { MainProviders } from 'providers'
 
-export const renderWithProviders = (children: ReactNode): RenderResult =>
-  render(<MainProviders>{children}</MainProviders>)
+type RenderWithProvidersProps = 'light' | 'dark'
+
+export const renderWithProviders = (
+  children: ReactNode,
+  setTheme?: RenderWithProvidersProps
+): RenderResult =>
+  render(<MainProviders setTheme={setTheme}>{children}</MainProviders>)

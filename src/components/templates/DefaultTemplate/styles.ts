@@ -1,19 +1,11 @@
-import styled, { css } from 'styled-components'
-
-const layout = css`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`
+import styled from 'styled-components'
+import T from 'theme'
 
 export const Grid = styled.div`
-  ${layout};
+  display: grid;
+  grid-template-columns: 23.2rem 1fr;
+  column-gap: ${T.grid.gutterDesktop};
+  width: 100%;
   min-height: 100vh;
-`
-
-export const WrapperPage = styled.div`
-  ${layout};
-  align-items: center;
-  height: 100%;
-  flex-grow: 1;
+  padding: ${T.grid.paddingDesktop};
 `

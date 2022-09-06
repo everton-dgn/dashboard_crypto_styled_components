@@ -25,7 +25,7 @@ const ColorsBtn = {
 export const Container = styled.button<BtnProps>`
   ${({ fullWidth, color, size }) => css`
     cursor: pointer;
-    border-radius: ${T.borderRadius.m};
+    border-radius: ${T.borderRadius.md};
     display: inline-flex;
     align-items: center;
     justify-content: center;

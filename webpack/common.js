@@ -107,7 +107,7 @@ module.exports = env => ({
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      favicon: './public/favicon.png',
+      favicon: './public/favicon-32x32.png',
       minify: isProduction,
       cache: true
     }),

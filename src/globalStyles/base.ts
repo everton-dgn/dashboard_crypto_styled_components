@@ -28,8 +28,7 @@ export const GlobalStyles = createGlobalStyle`
   body,
   html,
   #root {
-    background-color: ${T.colors.white};
-    color: ${T.colors.textPrimary};
+    background-color: ${T.colors.backgroundPage};
   }
 
   p, h1, h2, h3, h4, h5, h6 {
@@ -42,13 +41,12 @@ export const GlobalStyles = createGlobalStyle`
   select,
   textarea,
   button {
-    font: ${T.fonts.weights.medium} ${T.fonts.sizes.text2} Montserrat, sans-serif;
+    font: ${T.fonts.weights.medium} ${T.fonts.sizes.text5} Montserrat, sans-serif;
   }
 
   button {
     cursor: pointer;
     border: none;
-    border-radius: ${T.borderRadius.m};
   }
 
   #root {
@@ -63,6 +61,7 @@ export const GlobalStyles = createGlobalStyle`
   a:active {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
 
   img, picture, video, canvas, svg {
@@ -72,18 +71,18 @@ export const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar,
   scrollbar-width {
-    width: 1.6rem !important;
-    background-color: ${T.colors.white};
+    width: 16px !important;
+    background-color: ${T.colors.backgroundPage};
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: ${T.colors.grey};
-    border-radius: 20px;
+    background-color: ${T.colors.greyDynamic};
+    border-radius: ${T.borderRadius.lg};
   }
 
   :root {
-    scrollbar-color: ${T.colors.grey} ${T.colors.white} !important;
-    scrollbar-width: 1.6rem !important;
+    scrollbar-color: ${T.colors.greyDynamic} ${T.colors.backgroundPage} !important;
+    scrollbar-width: 16px !important;
   }
 
   ${ColorsTheme}

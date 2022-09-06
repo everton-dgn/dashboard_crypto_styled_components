@@ -1,16 +1,16 @@
 export const grid = {
-  container: '944px',
-  gutter: '16px',
-  margin: '16px'
-}
-
-export const columns = {
-  sm: 4,
-  md: 8,
-  lg: 12
+  gutterDesktop: '30px',
+  gutterTablet: '20px',
+  gutterPhone: '16px',
+  paddingDesktop: '30px',
+  paddingTablet: '20px',
+  paddingPhone: '16px'
 }
 
 export const borderRadius = {
-  m: '8px',
-  l: '20px'
+  xs: '0',
+  sm: '4px',
+  md: '8px',
+  lg: '20px',
+  xl: '50%'
 }

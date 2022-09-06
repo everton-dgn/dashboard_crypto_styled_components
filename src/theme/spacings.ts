@@ -1,7 +1,8 @@
 export const spacings = {
   xs: '8px',
-  s: '12px',
-  m: '16px',
-  l: '30px',
+  sm: '12px',
+  md: '16px',
+  xm: '18px',
+  lg: '30px',
   xl: '40px'
 }

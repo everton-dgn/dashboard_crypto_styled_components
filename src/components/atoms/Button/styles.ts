@@ -3,21 +3,24 @@ import T from 'theme'
 import { BtnProps } from './types'
 
 const SizesBtn = {
-  medium: css`
+  large: css`
     height: min-content;
+    min-height: 45px;
     font-size: ${T.fonts.sizes.text2};
-    padding: 12px;
+    padding: ${T.spacings.sm};
     font-weight: ${T.fonts.weights.medium};
     max-width: 224px;
   `
 }
 
 const ColorsBtn = {
-  blue: css`
-    background-color: ${T.colors.lightBlue};
+  primary: css`
+    background-image: ${T.colors.backgroundHighlight};
+    transition: all 0.2s linear;
 
     &:hover {
-      background-color: ${T.colors.darkGrey};
+      background-image: ${T.colors.backgroundHighlightHover};
+      box-shadow: 0 0 17px 2px #00e0ffc2;
     }
   `
 }
@@ -30,8 +33,6 @@ export const Container = styled.button<BtnProps>`
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    border: 1px solid transparent;
-    transition: background-color 0.15s ease-in-out;
     width: 100%;
     color: ${T.colors.white};
     ${!!color && ColorsBtn[color]};
@@ -47,18 +48,16 @@ export const Container = styled.button<BtnProps>`
 
     &:disabled,
     &:disabled:hover {
-      opacity: 0.5;
       cursor: not-allowed;
-      background-color: ${T.colors.grey};
+      background: ${T.colors.lightGrey};
+      box-shadow: none;
     }
 
     &:focus {
-      border: 1px solid ${T.colors.white};
-      box-shadow: 0 0 0 1px ${T.colors.darkGrey};
+      box-shadow: 0 0 0 1px ${T.colors.focus};
     }
 
     &:active {
-      border: 1px solid transparent;
       box-shadow: none;
     }
   `}

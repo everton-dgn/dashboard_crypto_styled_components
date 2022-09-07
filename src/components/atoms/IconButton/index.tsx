@@ -1,8 +1,12 @@
 import { IconButtonProps } from './types'
 import * as S from './styles'
 
-const IconButton = ({ icon, arialLabel }: IconButtonProps) => {
-  return <S.Button aria-label={arialLabel}>{icon}</S.Button>
+const IconButton = ({ icon, ariaLabel, ...props }: IconButtonProps) => {
+  return (
+    <S.Button aria-label={ariaLabel} {...props}>
+      {icon}
+    </S.Button>
+  )
 }
 
 export default IconButton

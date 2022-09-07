@@ -10,10 +10,7 @@ const CardLayout = ({ title, optionsMenu, children }: CardLayoutProps) => {
         <S.Header>
           <C.Typography text={title} type="text1" as="span" />
           {optionsMenu && (
-            <C.IconButton
-              icon={<IconOptionsMenu />}
-              arialLabel="Options menu"
-            />
+            <C.IconButton icon={<IconOptionsMenu />} ariaLabel="Options menu" />
           )}
         </S.Header>
       )}

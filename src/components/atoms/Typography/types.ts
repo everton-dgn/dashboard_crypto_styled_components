@@ -8,7 +8,7 @@ export type Typography =
   | 'text5'
   | 'text6'
 
-export type Weight = '300' | '400' | '500'
+export type Weight = 300 | 400 | 500
 
 export type TextElements = 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span'
 

@@ -2,7 +2,7 @@ import * as C from 'components'
 import * as S from './styles'
 import T from 'theme'
 import { useTheme } from 'hooks'
-import ArtificialIntelligence from 'assets/images/artificialIntelligence.png'
+import artificialIntelligence from 'assets/images/artificialIntelligence.webp'
 import { DATA_LIST_MENU } from './data'
 
 const VerticalMenu = () => {
@@ -20,18 +20,18 @@ const VerticalMenu = () => {
           type="text1"
           as="h2"
           align="center"
-          weight="500"
+          weight={500}
         />
         <C.Typography
           text="Virtual Assistant Will Help You"
           type="text5"
           as="p"
           align="center"
-          weight="400"
+          weight={400}
           color={T.colors.grey}
         />
       </S.WrapperTextHelp>
-      <img src={ArtificialIntelligence} alt="Begin" />
+      <img src={artificialIntelligence} alt="Begin" />
 
       <S.WrapperTextFooter>
         <S.WrapperSwitch>

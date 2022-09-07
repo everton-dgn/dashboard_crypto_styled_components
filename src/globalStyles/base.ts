@@ -64,11 +64,6 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
 
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-
   ::-webkit-scrollbar,
   scrollbar-width {
     width: 16px !important;

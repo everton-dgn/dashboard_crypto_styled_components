@@ -1,9 +1,11 @@
-import { borderRadius, grid } from './base'
+import { grid } from './grid'
+import { borderRadius } from './borderRadius'
 import { breakpoints } from './breakpoints'
 import { colors } from './colors'
 import { spacings } from './spacings'
 import { fonts } from './typographies'
 import { windowSizes } from './windowSizes'
+import { layerOrder } from './layerOrder'
 
 const T = {
   colors,
@@ -12,7 +14,8 @@ const T = {
   breakpoints,
   windowSizes,
   borderRadius,
-  grid
+  grid,
+  layerOrder
 } as const
 
 export default T

@@ -3,6 +3,8 @@ export const colors = {
   backgroundPage: 'var(--colors-background-page)',
   backgroundCard: 'var(--colors-background-card)',
   backgroundHighlight: 'linear-gradient(276deg, #00E0FF, #0061FF)',
+  backgroundHighlightHover: 'linear-gradient(276deg, #00e0ff 37%, #126bfe)',
+  backgroundBanner: 'linear-gradient(270deg, #242993 65%, #254cdd 109%)',
   focus: 'var(--colors-focus)',
   logo: 'var(--colors-logo)',
   greyDynamic: 'var(--colors-grey-dynamic)',

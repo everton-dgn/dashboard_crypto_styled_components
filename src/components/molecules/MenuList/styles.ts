@@ -16,7 +16,9 @@ export const Item = styled.li`
 `
 
 export const NavLink = styled(Link)<{ active: 'true' | 'false' }>`
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: ${T.spacings.xs};
   align-items: center;
   width: 100%;
   padding: ${T.spacings.xs} ${T.spacings.xm};
@@ -28,7 +30,6 @@ export const NavLink = styled(Link)<{ active: 'true' | 'false' }>`
   }
 
   svg {
-    margin-right: ${T.spacings.xs};
     fill: ${T.colors.grey};
   }
 

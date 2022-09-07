@@ -28,7 +28,7 @@ const MenuList = ({ dataListMenu }: MenuListProps) => {
               text={text}
               type="text3"
               color={T.colors.textPrimary}
-              weight="400"
+              weight={400}
               as="span"
             />
           </S.NavLink>

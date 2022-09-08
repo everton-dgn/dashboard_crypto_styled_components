@@ -10,6 +10,11 @@ export const ColorsTheme = css`
     --colors-focus: #12284c;
     --colors-grey-dynamic: #c9d2df;
     --colors-logo: #12284c;
+    --colors-gradient-overlay: radial-gradient(
+      50% 50% at 50% 50%,
+      #ebeef600 59%,
+      #eceff685 100%
+    );
   }
 
   body[data-theme='dark'] {
@@ -21,5 +26,10 @@ export const ColorsTheme = css`
     --colors-focus: #ffffff;
     --colors-grey-dynamic: #364763;
     --colors-logo: #ffffff;
+    --colors-gradient-overlay: radial-gradient(
+      50% 50% at 50% 50%,
+      #00000000 59%,
+      #00000059 100%
+    );
   }
 `

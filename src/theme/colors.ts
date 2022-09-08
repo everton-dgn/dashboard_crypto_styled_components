@@ -7,6 +7,7 @@ export const colors = {
   backgroundBanner: 'linear-gradient(270deg, #242993 65%, #254cdd 109%)',
   focus: 'var(--colors-focus)',
   logo: 'var(--colors-logo)',
+  gradientOverlay: 'var(--colors-gradient-overlay)',
   greyDynamic: 'var(--colors-grey-dynamic)',
   grey: '#798eae',
   lightGrey: '#c9d2df',

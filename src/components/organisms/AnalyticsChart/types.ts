@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-type LastBuyItems = {
+type AnalyticsItems = {
   currency: string
   name: string
   isPositive: boolean
@@ -12,6 +12,6 @@ type LastBuyItems = {
   icon: ReactNode
 }
 
-export type LastBuyProps = {
-  dataLastBuy: LastBuyItems[]
+export type AnalyticsChartProps = {
+  dataAnalytics: AnalyticsItems[]
 }

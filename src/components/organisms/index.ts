@@ -1,3 +1,5 @@
+export { default as AnalyticsChart } from './AnalyticsChart'
 export { default as LastBuy } from './LastBuy'
 export { default as MainBanner } from './MainBanner'
+export { default as StatisticsChart } from './StatisticsChart'
 export { default as VerticalMenu } from './VerticalMenu'

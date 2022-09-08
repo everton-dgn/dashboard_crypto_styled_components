@@ -11,6 +11,7 @@ export const Crypto = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
   column-gap: ${T.spacings.xs};
+  align-items: center;
 `
 
 export const InfoCrypto = styled.div`

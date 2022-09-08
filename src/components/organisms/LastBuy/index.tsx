@@ -8,23 +8,28 @@ const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
   return (
     <C.CardLayout title="LAST BUY" optionsMenu={[]}>
       <S.Wrapper>
-        {dataLastBuy.map(({ currency, isPositive, percent, icon }) => (
-          <Fragment key={currency}>
-            <S.Crypto>
-              <C.BoxIconCrypto svgIcon={icon} />
-              <S.InfoCrypto>
-                <C.Typography
-                  text={currency}
-                  type="text4"
-                  as="h2"
-                  weight={500}
-                />
-                <C.PercentageChange isPositive={isPositive} percent={percent} />
-              </S.InfoCrypto>
-            </S.Crypto>
-            <C.Separator maxHeight="26px" />
-          </Fragment>
-        ))}
+        {dataLastBuy.map(
+          ({ currency, isPositive, currentPercentageVariation, icon }) => (
+            <Fragment key={currency}>
+              <S.Crypto>
+                <C.BoxIconCrypto svgIcon={icon} />
+                <S.InfoCrypto>
+                  <C.Typography
+                    text={currency}
+                    type="text4"
+                    as="h2"
+                    weight={500}
+                  />
+                  <C.PercentageChange
+                    isPositive={isPositive}
+                    percent={currentPercentageVariation}
+                  />
+                </S.InfoCrypto>
+              </S.Crypto>
+              <C.Separator maxHeight="26px" />
+            </Fragment>
+          )
+        )}
         <C.IconButton
           icon={<C.BoxIconCrypto svgIcon={<AddCriptocurrency />} />}
           ariaLabel="Add cryptocurrency"

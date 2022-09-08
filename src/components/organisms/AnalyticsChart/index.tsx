@@ -28,7 +28,7 @@ const AnalyticsChart = ({ dataAnalytics }: AnalyticsChartProps) => {
                 color={T.colors.textTertiary}
               />
               <C.Typography
-                text={`P${price}`}
+                text={`$${price}`}
                 type="text6"
                 as="p"
                 align="center"

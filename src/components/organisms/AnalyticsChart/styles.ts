@@ -18,6 +18,5 @@ export const WrapperBoxCrypto = styled.div`
 export const WrapperText = styled.div`
   display: grid;
   grid-template-columns: max-content;
-  gap: 2px;
   justify-content: center;
 `

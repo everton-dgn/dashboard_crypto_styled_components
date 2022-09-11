@@ -2,15 +2,25 @@ import styled from 'styled-components'
 import T from 'theme'
 
 export const Container = styled.section`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
   width: 100%;
   border-radius: ${T.borderRadius.lg};
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
   padding: ${T.grid.paddingDesktop} 0;
+  position: sticky;
+  top: 0;
+  left: 0;
   height: calc(100vh - 60px);
   overflow-y: auto;
+`
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 `
 
 export const WrapperHelp = styled.div`

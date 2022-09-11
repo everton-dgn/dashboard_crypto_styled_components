@@ -4,9 +4,8 @@ import T from 'theme'
 export const Container = styled.main`
   display: grid;
   grid-template-columns: 1fr 35rem;
+  grid-auto-rows: max-content;
   column-gap: ${T.spacings.lg};
-  height: calc(100vh - 60px);
-  overflow-y: auto;
   width: 100%;
 `
 

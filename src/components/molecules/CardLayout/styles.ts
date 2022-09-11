@@ -21,7 +21,7 @@ export const Container = styled.section`
   flex-direction: column;
   width: 100%;
   border-radius: ${T.borderRadius.lg};
-  box-shadow: 0 4px 25px -2px #0b226619;
+  box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
   padding: ${T.grid.paddingDesktop};
 `

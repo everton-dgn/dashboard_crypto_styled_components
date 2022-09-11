@@ -8,7 +8,7 @@ export const Container = styled.section`
   width: 100%;
   height: 26.2rem;
   border-radius: ${T.borderRadius.lg};
-  box-shadow: 0 4px 25px -2px #0b226619;
+  box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   padding: ${T.grid.paddingDesktop};
   background: ${T.colors.backgroundBanner};
   overflow: hidden;

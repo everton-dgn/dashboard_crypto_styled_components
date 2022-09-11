@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import T from 'theme'
 
-export const Container = styled.section`
+export const Container = styled.aside`
   display: grid;
   grid-template-columns: 100%;
   width: 100%;
@@ -16,7 +16,7 @@ export const Container = styled.section`
   overflow-y: auto;
 `
 
-export const Content = styled.div`
+export const Content = styled.nav`
   display: flex;
   flex-direction: column;
   width: 100%;

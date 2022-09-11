@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import T from 'theme'
 import { Link } from 'react-router-dom'
 
-export const NavList = styled.nav`
+export const NavList = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: ${T.spacings.sm};

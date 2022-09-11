@@ -40,6 +40,12 @@ export const WrapperTextHelp = styled.div`
   padding: 0 ${T.grid.paddingDesktop};
 `
 
+export const ImageBegin = styled.img`
+  display: flex;
+  width: 100%;
+  height: 100%;
+`
+
 export const WrapperTextFooter = styled(WrapperTextHelp)`
   margin-top: auto;
 `

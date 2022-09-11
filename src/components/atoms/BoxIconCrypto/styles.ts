@@ -7,8 +7,14 @@ export const Container = styled.div`
   width: 30px;
   height: 30px;
 
+  &:hover svg {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 0 ${T.colors.white});
+  }
+
   svg {
-    filter: drop-shadow(0 0 3px white);
+    filter: drop-shadow(0 0 3px ${T.colors.white});
+    transition: all 0.2s linear;
   }
 
   path {

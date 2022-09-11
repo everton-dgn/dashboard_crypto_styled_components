@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   grid-template-columns: max-content max-content max-content max-content max-content;
   justify-content: space-between;
   align-items: center;
-  gap: ${T.grid.gutterDesktop};
+  gap: ${T.grid.gutterPhone};
 `
 
 export const WrapperCrypto = styled.div`

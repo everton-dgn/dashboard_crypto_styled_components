@@ -1,3 +1,5 @@
+import { currencyFormatter } from 'data/currencyFormatter'
+import T from 'theme'
 import * as S from './styles'
 import * as C from 'components'
 import { CryptocurrencyDataBalanceBoxProps } from './types'
@@ -24,22 +26,30 @@ const CryptocurrencyDataBalanceBox = ({
 
         <S.ContentValues>
           <C.Typography text="Price:" type="text6" as="span" />
-          <C.Typography text={`$${price}`} type="text6" as="span" />
+          <C.Typography
+            text={currencyFormatter(price)}
+            type="text6"
+            as="span"
+            color={T.colors.textQuaternary}
+            weight={500}
+          />
         </S.ContentValues>
 
         <S.ContentValues>
           <C.Typography text="24h %:" type="text6" as="span" />
-          <C.PercentageChange
+          <C.VariableValueWithArrowSign
             isPositive={isPositive}
-            percent={lastDayPercentageChange}
+            value={`${lastDayPercentageChange}%`}
+            size="small"
           />
         </S.ContentValues>
 
         <S.ContentValues>
           <C.Typography text="7d %:" type="text6" as="span" />
-          <C.PercentageChange
+          <C.VariableValueWithArrowSign
             isPositive={isPositive}
-            percent={changePercentOfTheWeek}
+            value={`${changePercentOfTheWeek}%`}
+            size="small"
           />
         </S.ContentValues>
 

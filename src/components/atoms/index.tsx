@@ -1,6 +1,6 @@
+export { default as Avatar } from './Avatar'
 export { default as BoxIconCrypto } from './BoxIconCrypto'
 export { default as Button } from './Button'
-export { default as CardLayout } from './CardLayout'
 export { default as ErrorBoundary } from './ErrorBoundary'
 export { default as IconButton } from './IconButton'
 export { default as Input } from './Input'

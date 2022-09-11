@@ -20,9 +20,10 @@ const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
                     as="h2"
                     weight={500}
                   />
-                  <C.PercentageChange
+                  <C.VariableValueWithArrowSign
                     isPositive={isPositive}
-                    percent={currentPercentageVariation}
+                    value={`${currentPercentageVariation}%`}
+                    size="small"
                   />
                 </S.InfoCrypto>
               </S.Crypto>

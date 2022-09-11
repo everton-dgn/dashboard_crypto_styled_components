@@ -16,7 +16,8 @@ export const Button = styled.button<{ color?: string; size?: string }>`
     width: ${size || '24px'};
     height: ${size || '24px'};
 
-    svg {
+    svg,
+    path {
       fill: ${color || T.colors.textPrimary};
     }
   `}

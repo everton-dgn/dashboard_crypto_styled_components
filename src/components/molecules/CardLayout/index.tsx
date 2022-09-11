@@ -1,4 +1,4 @@
-import { CardLayoutProps } from 'components/atoms/CardLayout/types'
+import { CardLayoutProps } from './types'
 import { ReactComponent as IconOptionsMenu } from 'assets/icons/optionsMenu.svg'
 import * as S from './styles'
 import * as C from 'components'

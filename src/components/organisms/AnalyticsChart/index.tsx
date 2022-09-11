@@ -1,4 +1,5 @@
-import { AnalyticsChartProps } from 'components/organisms/AnalyticsChart/types'
+import { AnalyticsChartProps } from './types'
+import { currencyFormatter } from 'data/currencyFormatter'
 import T from 'theme'
 import * as S from './styles'
 import * as C from 'components'
@@ -28,7 +29,7 @@ const AnalyticsChart = ({ dataAnalytics }: AnalyticsChartProps) => {
                 color={T.colors.textTertiary}
               />
               <C.Typography
-                text={`$${price}`}
+                text={currencyFormatter(price)}
                 type="text6"
                 as="p"
                 align="center"

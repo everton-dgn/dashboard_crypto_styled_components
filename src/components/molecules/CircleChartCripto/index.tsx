@@ -1,4 +1,4 @@
-import { CircleChartCriptoProps } from 'components/molecules/CircleChartCripto/types'
+import { CircleChartCriptoProps } from './types'
 import * as S from './styles'
 import * as C from 'components'
 

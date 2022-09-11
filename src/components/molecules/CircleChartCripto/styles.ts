@@ -18,7 +18,7 @@ export const Percent = styled.div`
     height: 78px;
     border-radius: 50%;
     background: ${T.colors.gradientOverlay};
-    z-index: 1100;
+    z-index: ${T.layerOrder.overlay};
   }
 `
 
@@ -32,6 +32,7 @@ export const WrapperCrypto = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: ${T.borderRadius.xl};
+  z-index: ${T.layerOrder.overlay};
 `
 
 export const Svg = styled.svg`

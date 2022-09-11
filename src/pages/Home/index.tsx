@@ -35,7 +35,11 @@ const Home = () => {
           wallet={USER_DATA.wallet}
           flagLogo={USER_DATA.flagLogo}
         />
-        <C.QuickTransfer quickTransferData={QUICK_TRANSFER_DATA} />
+        <C.QuickTransfer
+          initialState={3}
+          increment={3}
+          quickTransferData={QUICK_TRANSFER_DATA}
+        />
         <C.SemesterChart chartData={CHART_DATA} />
       </S.SecondaryLayout>
     </S.Container>

@@ -8,5 +8,7 @@ type QuickTransferItems = {
 }
 
 export type QuickTransferProps = {
+  initialState: number
+  increment: number
   quickTransferData: QuickTransferItems[]
 }

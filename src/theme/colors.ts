@@ -9,6 +9,7 @@ export const colors = {
   logo: 'var(--colors-logo)',
   chart: 'var(--colors-chart)',
   shadow: 'var(--colors-shadow)',
+  blur: 'var(--colors-blur)',
   gradientOverlay: 'var(--colors-gradient-overlay)',
   greyDynamic: 'var(--colors-grey-dynamic)',
   grey: '#798eae',

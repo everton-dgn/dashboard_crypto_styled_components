@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import T from 'theme'
-import { BtnProps } from './types'
+import { ButtonProps } from './types'
 
 const SizesBtn = {
   large: css`
@@ -10,6 +10,13 @@ const SizesBtn = {
     padding: ${T.spacings.sm};
     font-weight: ${T.fonts.weights.medium};
     max-width: 224px;
+  `,
+  small: css`
+    height: fit-content;
+    font-size: ${T.fonts.sizes.text6};
+    padding: ${T.spacings.xs} ${T.spacings.sm};
+    font-weight: ${T.fonts.weights.medium};
+    max-width: fit-content;
   `
 }
 
@@ -25,7 +32,7 @@ const ColorsBtn = {
   `
 }
 
-export const Container = styled.button<BtnProps>`
+export const Container = styled.button<ButtonProps>`
   ${({ fullWidth, color, size }) => css`
     cursor: pointer;
     border-radius: ${T.borderRadius.md};

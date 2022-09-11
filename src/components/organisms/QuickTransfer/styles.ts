@@ -6,7 +6,9 @@ export const Wrapper = styled.div`
   grid-template-columns: 1fr;
   grid-auto-rows: max-content;
   row-gap: ${T.spacings.xm};
+  position: relative;
 `
+
 export const WrapperUser = styled.div`
   display: grid;
   grid-template-columns: max-content 1fr max-content;
@@ -36,4 +38,22 @@ export const WrapperInfoCard = styled.div`
   path {
     fill: ${T.colors.grey};
   }
+`
+
+export const WrapperButton = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: -18px auto 0 auto;
+  z-index: ${T.layerOrder.base};
+`
+
+export const WrapperViewMore = styled.span`
+  position: absolute;
+  background: ${T.colors.blur};
+  filter: blur(21px);
+  left: -30px;
+  bottom: -30px;
+  width: calc(100% + 60px);
+  height: 100px;
 `

@@ -10,7 +10,7 @@ const MiniIncomeChart = ({ isPositive }: MiniIncomeChartProps) => {
 
   return (
     <S.Image
-      width={105}
+      width={86}
       height={30}
       src={chartImage}
       alt={`${chartColor} graph indicating ${chartType}`}

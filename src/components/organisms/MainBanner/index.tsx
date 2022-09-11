@@ -40,7 +40,6 @@ const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
       </S.Wrapper>
 
       <S.ImageNft
-        fetchpriority="high"
         width={412}
         height={262}
         src={srcImage}

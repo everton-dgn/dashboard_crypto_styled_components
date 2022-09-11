@@ -14,7 +14,7 @@ export const Container = styled.section`
   overflow: hidden;
 `
 
-export const ImageNft = styled.img<{ fetchpriority?: string }>`
+export const ImageNft = styled.img.attrs({ fetchpriority: 'high' })`
   display: flex;
   width: 41.2rem;
   height: 26.2rem;

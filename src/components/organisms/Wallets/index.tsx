@@ -16,7 +16,12 @@ const Wallets = ({ wallet, name, flagLogo }: WalletsProps) => {
           <S.ValueInTheWallet>{currencyFormatter(wallet)}</S.ValueInTheWallet>
           <S.Name>{name}</S.Name>
           {flagLogo}
-          <S.ImageCredCard src={credCard} alt="Credit card" />
+          <S.ImageCredCard
+            width={290}
+            height={173}
+            src={credCard}
+            alt="Credit card"
+          />
         </S.Content>
       </S.Wrapper>
     </C.CardLayout>

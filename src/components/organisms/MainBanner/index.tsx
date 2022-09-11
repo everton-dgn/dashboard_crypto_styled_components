@@ -39,7 +39,13 @@ const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
         <C.Button text="Start Earning" size="large" color="primary" />
       </S.Wrapper>
 
-      <S.ImageNft src={srcImage} alt={altDescription} />
+      <S.ImageNft
+        fetchpriority="high"
+        width={412}
+        height={262}
+        src={srcImage}
+        alt={altDescription}
+      />
     </S.Container>
   )
 }

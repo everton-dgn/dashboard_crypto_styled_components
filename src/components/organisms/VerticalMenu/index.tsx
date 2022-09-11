@@ -33,7 +33,12 @@ const VerticalMenu = () => {
               color={T.colors.grey}
             />
           </S.WrapperTextHelp>
-          <img src={artificialIntelligence} alt="Begin" />
+          <img
+            width={232}
+            height={220}
+            src={artificialIntelligence}
+            alt="Begin"
+          />
         </S.WrapperHelp>
 
         <S.WrapperTextFooter>

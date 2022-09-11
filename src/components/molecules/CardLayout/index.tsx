@@ -1,11 +1,16 @@
+import { useLazyLoad } from 'hooks'
 import { CardLayoutProps } from './types'
 import { ReactComponent as IconOptionsMenu } from 'assets/icons/optionsMenu.svg'
 import * as S from './styles'
 import * as C from 'components'
 
 const CardLayout = ({ title, optionsMenu, children }: CardLayoutProps) => {
+  const { showComponent, renderRef } = useLazyLoad({
+    distancePXWindowCallComponent: 50
+  })
+
   return (
-    <S.Container>
+    <S.Container ref={renderRef}>
       {title && (
         <S.Header>
           <C.Typography text={title} type="text1" as="span" />
@@ -14,7 +19,7 @@ const CardLayout = ({ title, optionsMenu, children }: CardLayoutProps) => {
           )}
         </S.Header>
       )}
-      {children}
+      {showComponent && children}
     </S.Container>
   )
 }

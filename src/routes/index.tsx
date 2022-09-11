@@ -4,7 +4,7 @@ import * as Pages from 'pages'
 import * as C from 'components'
 
 const RoutesWrapper = () => (
-  <Suspense fallback={<>Lazy Loading...</>}>
+  <Suspense fallback={<>Loading...</>}>
     <Routes>
       <Route element={<C.DefaultTemplate />}>
         <Route index element={<Pages.Home />} />

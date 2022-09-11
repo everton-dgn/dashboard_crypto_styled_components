@@ -51,7 +51,7 @@ const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
           data={chartData}
           margin={{
             top: 0,
-            right: 0,
+            right: 5,
             left: -30,
             bottom: -8
           }}

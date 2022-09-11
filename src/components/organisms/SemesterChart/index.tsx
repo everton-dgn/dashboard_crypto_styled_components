@@ -60,8 +60,8 @@ const SemesterChart = ({ chartData }: SemesterChartProps) => {
           <AreaChart
             data={chartData}
             margin={{
-              top: 0,
-              right: 0,
+              top: -18,
+              right: 5,
               left: 12,
               bottom: -8
             }}

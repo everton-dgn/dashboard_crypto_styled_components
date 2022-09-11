@@ -4,7 +4,7 @@ import * as C from 'components'
 
 const DefaultTemplate = () => {
   return (
-    <S.Grid id="observerToLazyLoad">
+    <S.Grid>
       <C.VerticalMenu />
       <Outlet />
     </S.Grid>

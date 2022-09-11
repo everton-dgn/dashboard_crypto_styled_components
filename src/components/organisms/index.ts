@@ -1,9 +1,5 @@
-import { lazy } from 'react'
-
 export { default as AnalyticsChart } from './AnalyticsChart'
-export const CryptocurrencyDataBalanceBox = lazy(
-  () => import('./CryptocurrencyDataBalanceBox')
-)
+export { default as CryptocurrencyDataBalanceBox } from './CryptocurrencyDataBalanceBox'
 export { default as LastBuy } from './LastBuy'
 export { default as MainBanner } from './MainBanner'
 export { default as QuickTransfer } from './QuickTransfer'

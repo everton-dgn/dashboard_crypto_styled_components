@@ -7,11 +7,11 @@ export const fonts = {
     medium: 500
   },
   sizes: {
-    text1: '18px',
-    text2: '16px',
-    text3: '15px',
-    text4: '14px',
-    text5: '13px',
-    text6: '12px'
+    text1: '1.8rem',
+    text2: '1.6rem',
+    text3: '1.5rem',
+    text4: '1.4rem',
+    text5: '1.3rem',
+    text6: '1.2rem'
   }
 }

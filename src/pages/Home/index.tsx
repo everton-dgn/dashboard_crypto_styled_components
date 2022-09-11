@@ -2,7 +2,12 @@ import { useSetPageTitle } from 'hooks'
 import * as S from './styles'
 import * as C from 'components'
 import nft from 'assets/images/nft.webp'
-import { CRYPTO_DATA, USER_DATA, QUICK_TRANSFER_DATA, CHART_DATA } from './data'
+import {
+  CHART_DATA,
+  CRYPTO_DATA,
+  QUICK_TRANSFER_DATA,
+  USER_DATA
+} from 'fakeApi'
 
 const Home = () => {
   useSetPageTitle({ pageTitle: 'Home' })

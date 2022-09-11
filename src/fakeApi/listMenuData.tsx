@@ -6,7 +6,7 @@ import { ReactComponent as IconCalendar } from 'assets/icons/calendar.svg'
 import { ReactComponent as IconSupport } from 'assets/icons/support.svg'
 import { ReactComponent as IconLogout } from 'assets/icons/logout.svg'
 
-export const DATA_LIST_MENU = [
+export const LIST_MENU_DATA = [
   {
     text: 'Home',
     icon: <IconHome />,

@@ -3,7 +3,7 @@ import * as S from './styles'
 import T from 'theme'
 import { useTheme } from 'hooks'
 import artificialIntelligence from 'assets/images/artificialIntelligence.webp'
-import { DATA_LIST_MENU } from './data'
+import { LIST_MENU_DATA } from 'fakeApi'
 
 const VerticalMenu = () => {
   const { theme, setTheme, isDarkMode } = useTheme()
@@ -13,7 +13,7 @@ const VerticalMenu = () => {
       <S.Content>
         <C.Logo />
 
-        <C.MenuList dataListMenu={DATA_LIST_MENU} />
+        <C.MenuList dataListMenu={LIST_MENU_DATA} />
 
         <S.WrapperHelp>
           <S.WrapperTextHelp>

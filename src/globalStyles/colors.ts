@@ -10,6 +10,7 @@ export const ColorsTheme = css`
     --colors-focus: #12284c;
     --colors-grey-dynamic: #c9d2df;
     --colors-logo: #12284c;
+    --colors-chart: #00e0ff;
     --colors-gradient-overlay: radial-gradient(
       50% 50% at 50% 50%,
       #ebeef600 59%,
@@ -26,6 +27,7 @@ export const ColorsTheme = css`
     --colors-focus: #ffffff;
     --colors-grey-dynamic: #364763;
     --colors-logo: #ffffff;
+    --colors-chart: #ffffff;
     --colors-gradient-overlay: radial-gradient(
       50% 50% at 50% 50%,
       #00000000 59%,

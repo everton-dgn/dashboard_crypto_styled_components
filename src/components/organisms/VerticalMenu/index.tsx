@@ -14,24 +14,26 @@ const VerticalMenu = () => {
 
       <C.MenuList dataListMenu={DATA_LIST_MENU} />
 
-      <S.WrapperTextHelp>
-        <C.Typography
-          text="Need Help?"
-          type="text1"
-          as="h2"
-          align="center"
-          weight={500}
-        />
-        <C.Typography
-          text="Virtual Assistant Will Help You"
-          type="text5"
-          as="p"
-          align="center"
-          weight={400}
-          color={T.colors.grey}
-        />
-      </S.WrapperTextHelp>
-      <img src={artificialIntelligence} alt="Begin" />
+      <S.WrapperHelp>
+        <S.WrapperTextHelp>
+          <C.Typography
+            text="Need Help?"
+            type="text1"
+            as="h2"
+            align="center"
+            weight={500}
+          />
+          <C.Typography
+            text="Virtual Assistant Will Help You"
+            type="text5"
+            as="p"
+            align="center"
+            weight={400}
+            color={T.colors.grey}
+          />
+        </S.WrapperTextHelp>
+        <img src={artificialIntelligence} alt="Begin" />
+      </S.WrapperHelp>
 
       <S.WrapperTextFooter>
         <S.WrapperSwitch>

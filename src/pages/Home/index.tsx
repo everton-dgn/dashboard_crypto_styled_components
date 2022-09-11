@@ -16,7 +16,7 @@ const Home = () => {
           <C.StatisticsChart chartData={CHART_DATA} />
           <C.AnalyticsChart dataAnalytics={CRYPTO_DATA} />
         </S.WrapperCharts>
-        {CRYPTO_DATA.slice(0, 2).map(cryptoData => (
+        {CRYPTO_DATA.map(cryptoData => (
           <C.CryptocurrencyDataBalanceBox
             key={cryptoData.name}
             cryptocurrencyDataBalance={cryptoData}

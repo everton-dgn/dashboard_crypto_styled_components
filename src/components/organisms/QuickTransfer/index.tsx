@@ -9,32 +9,30 @@ const QuickTransfer = ({ quickTransferData }: QuickTransferProps) => {
   return (
     <C.CardLayout title="QUICK TRANSFER" optionsMenu={[]}>
       <S.Wrapper>
-        {quickTransferData
-          .slice(0, 2)
-          .map(({ urlImage, name, flagLogo, cardNumber }) => (
-            <S.WrapperUser key={cardNumber}>
-              <C.Avatar name={name} urlImage={urlImage} size="medium" />
+        {quickTransferData.map(({ urlImage, name, flagLogo, cardNumber }) => (
+          <S.WrapperUser key={cardNumber}>
+            <C.Avatar name={name} urlImage={urlImage} size="medium" />
 
-              <S.ContentInfo>
-                <C.Typography text={name} type="text6" as="span" />
-                <S.WrapperInfoCard>
-                  {flagLogo}
-                  <C.Typography
-                    text={creditCardNumberFormatter(cardNumber)}
-                    type="text6"
-                    as="span"
-                    color={T.colors.grey}
-                  />
-                </S.WrapperInfoCard>
-              </S.ContentInfo>
+            <S.ContentInfo>
+              <C.Typography text={name} type="text6" as="span" />
+              <S.WrapperInfoCard>
+                {flagLogo}
+                <C.Typography
+                  text={creditCardNumberFormatter(cardNumber)}
+                  type="text6"
+                  as="span"
+                  color={T.colors.grey}
+                />
+              </S.WrapperInfoCard>
+            </S.ContentInfo>
 
-              <C.IconButton
-                icon={<IconArrowEast />}
-                ariaLabel="viewMore"
-                color={T.colors.grey}
-              />
-            </S.WrapperUser>
-          ))}
+            <C.IconButton
+              icon={<IconArrowEast />}
+              ariaLabel="viewMore"
+              color={T.colors.grey}
+            />
+          </S.WrapperUser>
+        ))}
       </S.Wrapper>
     </C.CardLayout>
   )

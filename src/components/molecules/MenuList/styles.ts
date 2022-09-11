@@ -7,7 +7,7 @@ export const NavList = styled.nav`
   grid-template-columns: 1fr;
   row-gap: ${T.spacings.sm};
   width: 100%;
-  padding: ${T.grid.paddingDesktop} ${T.spacings.sm};
+  padding: ${T.grid.paddingDesktop} ${T.spacings.sm} 40px ${T.spacings.sm};
 `
 
 export const Item = styled.li`

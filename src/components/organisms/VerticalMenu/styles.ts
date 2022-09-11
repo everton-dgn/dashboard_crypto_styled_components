@@ -9,6 +9,17 @@ export const Container = styled.section`
   box-shadow: 0 4px 25px -2px #0b226619;
   background: ${T.colors.backgroundCard};
   padding: ${T.grid.paddingDesktop} 0;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+`
+
+export const WrapperHelp = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  flex-grow: 1;
+  margin-bottom: 30px;
 `
 
 export const WrapperTextHelp = styled.div`

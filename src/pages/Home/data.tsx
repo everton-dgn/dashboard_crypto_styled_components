@@ -3,8 +3,12 @@ import { ReactComponent as IconEth } from 'assets/icons/cryptocurrency/eth.svg'
 import { ReactComponent as IconIota } from 'assets/icons/cryptocurrency/iota.svg'
 import { ReactComponent as IconBnb } from 'assets/icons/cryptocurrency/bnb.svg'
 import { ReactComponent as IconDash } from 'assets/icons/cryptocurrency/dash.svg'
+import { ReactComponent as Visa } from 'assets/images/visa.svg'
+import userAvatar from 'assets/images/userAvatar.webp'
+import avatar1 from 'assets/images/avatar1.webp'
+import avatar2 from 'assets/images/avatar2.webp'
 
-export const DATA_CRYPTO = [
+export const CRYPTO_DATA = [
   {
     currency: 'BTC',
     name: 'Bitcoin',
@@ -59,5 +63,75 @@ export const DATA_CRYPTO = [
     totalPercentage: 89,
     price: 174.05,
     icon: <IconDash title="DASH" />
+  }
+]
+
+export const USER_DATA = {
+  name: 'Éverton Toffanetto',
+  email: 'evertondgn@hotmail.com',
+  isPremium: true,
+  hasNewsNotifications: true,
+  urlImage: userAvatar,
+  wallet: 8_900.0,
+  flagLogo: <Visa title="visa" />
+}
+
+export const QUICK_TRANSFER_DATA = [
+  {
+    name: 'Anddrey Wisher',
+    urlImage: avatar1,
+    flagLogo: <Visa title="visa" />,
+    cardNumber: 2039237843455690
+  },
+  {
+    name: 'Allan Sylvester',
+    urlImage: avatar2,
+    flagLogo: <Visa title="visa" />,
+    cardNumber: 4589576529834888
+  },
+  {
+    name: 'John Doe 1',
+    urlImage: avatar1,
+    flagLogo: <Visa title="visa" />,
+    cardNumber: 3401459045687755
+  },
+  {
+    name: 'John Doe 2',
+    urlImage: avatar2,
+    flagLogo: <Visa title="visa" />,
+    cardNumber: 434582765381092
+  },
+  {
+    name: 'John Doe 3',
+    urlImage: avatar1,
+    flagLogo: <Visa title="visa" />,
+    cardNumber: 5789102938475645
+  }
+]
+
+export const CHART_DATA = [
+  {
+    month: 'Sep',
+    wallet: 28.02
+  },
+  {
+    month: 'Oct',
+    wallet: 19.45
+  },
+  {
+    month: 'Nov',
+    wallet: 24.09
+  },
+  {
+    month: 'Dec',
+    wallet: 35.06
+  },
+  {
+    month: 'Jan',
+    wallet: 38.91
+  },
+  {
+    month: 'Feb',
+    wallet: 49.01
   }
 ]

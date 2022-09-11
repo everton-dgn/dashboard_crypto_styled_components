@@ -21,6 +21,7 @@ export const NavLink = styled(Link)<{ active: 'true' | 'false' }>`
   column-gap: ${T.spacings.xs};
   align-items: center;
   width: 100%;
+  height: 4rem;
   padding: ${T.spacings.xs} ${T.spacings.xm};
   border-radius: ${T.borderRadius.md};
 

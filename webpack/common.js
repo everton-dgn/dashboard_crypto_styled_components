@@ -96,7 +96,10 @@ module.exports = env => ({
       },
       {
         test: /\.(webp|png|jpg|svg|gif)$/i,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
       }
     ]
   },

@@ -8,7 +8,8 @@ const isMinimumWidth = (size: number): boolean =>
 export const getWindowSize = (): GetWindowSizeType => ({
   sm: isMinimumWidth(T.windowSizes.sm),
   md: isMinimumWidth(T.windowSizes.md),
-  lg: isMinimumWidth(T.windowSizes.lg)
+  lg: isMinimumWidth(T.windowSizes.lg),
+  custom: size => isMinimumWidth(size)
 })
 
 export const useRenderingByWindowSize = (): UseRenderingByWindowSizeType => {

@@ -14,7 +14,8 @@ export const Container = styled.section`
   overflow: hidden;
 `
 
-export const ImageNft = styled.img`
+export const ImageNft = styled.img<{ opacity: number }>`
+  opacity: ${({ opacity }) => opacity};
   display: flex;
   width: 41.2rem;
   height: 26.2rem;
@@ -30,19 +31,33 @@ export const Wrapper = styled.div`
   row-gap: ${T.grid.gutterDesktop};
   width: 100%;
   height: 100%;
-  max-width: 50%;
+  max-width: 100%;
   z-index: ${T.layerOrder.base};
+  justify-items: left;
+
+  ${T.breakpoints.custom(1413)} {
+    max-width: 50%;
+  }
 `
 
 export const WrapperText = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: ${T.spacings.md};
+
+  h1 {
+    text-shadow: 0 1px 7px #001435;
+  }
 `
 
 export const WrapperSubtitle = styled.div`
   display: grid;
   grid-template-columns: max-content max-content;
   gap: ${T.grid.gutterDesktop};
-  width: 100%;
+  width: fit-content;
+  justify-content: center;
+
+  h2 {
+    text-shadow: 0 1px 7px #001435;
+  }
 `

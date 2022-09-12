@@ -27,7 +27,7 @@ const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
                   />
                 </S.InfoCrypto>
               </S.Crypto>
-              <C.Separator maxHeight="26px" />
+              {/* <C.Separator maxHeight="26px" /> */}
             </Fragment>
           )
         )}

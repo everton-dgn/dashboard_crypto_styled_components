@@ -35,8 +35,8 @@ const VerticalMenu = () => {
           />
         </S.WrapperTextHelp>
         <S.ImageBegin
-          width={232}
-          height={240}
+          width={348}
+          height={360}
           src={artificialIntelligence}
           alt="Begin"
         />

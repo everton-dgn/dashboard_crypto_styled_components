@@ -53,10 +53,9 @@ const CryptocurrencyDataBalanceBox = ({
           />
         </S.ContentValues>
 
-        <S.WrapperLastWeekSChart>
-          <C.Typography text="Last 7 days" type="text6" as="span" />
-          <C.MiniIncomeChart isPositive={isPositive} />
-        </S.WrapperLastWeekSChart>
+        <C.Typography text="Last 7 days:" type="text6" as="span" />
+
+        <C.MiniIncomeChart isPositive={isPositive} />
       </S.Wrapper>
     </C.CardLayout>
   )

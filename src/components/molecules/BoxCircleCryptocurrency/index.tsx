@@ -11,7 +11,7 @@ const BoxCircleCryptocurrency = ({
   price,
   icon
 }: BoxCircleCryptocurrencyProps) => {
-  const [currentPercent] = useDecrementAnimation({ total: totalPercentage })
+  const currentPercent = useDecrementAnimation({ total: totalPercentage })
 
   return (
     <S.WrapperBoxCrypto key={name}>

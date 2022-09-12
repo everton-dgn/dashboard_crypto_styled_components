@@ -3,10 +3,22 @@ import T from 'theme'
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content max-content;
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  grid-auto-flow: row;
   align-items: center;
-  gap: ${T.grid.gutterPhone};
+  gap: ${T.spacings.md};
+  white-space: nowrap;
+
+  span {
+    width: fit-content;
+    word-wrap: initial;
+  }
+
+  ${T.breakpoints.custom(1360)} {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 `
 
 export const WrapperCrypto = styled.div`
@@ -22,12 +34,5 @@ export const ContentValues = styled.div`
   display: grid;
   grid-template-columns: max-content max-content;
   column-gap: ${T.spacings.xs};
-  align-items: center;
-`
-
-export const WrapperLastWeekSChart = styled.div`
-  display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: ${T.spacings.xm};
   align-items: center;
 `

@@ -23,5 +23,5 @@ export const useDecrementAnimation = ({ total }: UseDecrementAnimationType) => {
     }
   }, [currentValue, total])
 
-  return [currentValue]
+  return currentValue
 }

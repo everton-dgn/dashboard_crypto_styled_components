@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   position: relative;
   display: flex;
-  border-radius: 16px;
+  border-radius: 14px;
   margin-top: 16px;
   z-index: 0;
   transition: transform 0.2s ease-in-out;
@@ -51,7 +51,7 @@ export const Content = styled.div`
     height: 100%;
     position: absolute;
     background-color: ${T.colors.grey};
-    border-radius: 16px;
+    border-radius: 14px;
     transform: translate3d(1px, -16px, 0) rotate(-3.98deg);
     z-index: -2;
     transition: transform 0.2s ease-in-out;
@@ -64,7 +64,7 @@ export const Content = styled.div`
     height: 100%;
     position: absolute;
     background-color: ${T.colors.grey};
-    border-radius: 16px;
+    border-radius: 14px;
     z-index: -1;
     filter: drop-shadow(0 -1px 10px #00000042) drop-shadow(0 0 11px #00000066);
   }
@@ -110,6 +110,6 @@ export const Name = styled.span`
 export const ImageCredCard = styled.img`
   display: flex;
   width: 100%;
-  border: 1px solid #ffffff7b;
-  border-radius: 16px;
+  height: auto;
+  border-radius: 14px;
 `

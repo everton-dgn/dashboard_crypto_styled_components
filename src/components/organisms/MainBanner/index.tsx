@@ -41,7 +41,7 @@ const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
 
       <S.ImageNft
         width={412}
-        height={301}
+        height={262}
         src={srcImage}
         alt={altDescription}
       />

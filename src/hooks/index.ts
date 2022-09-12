@@ -1,3 +1,4 @@
+export * from './useDecrementAnimation'
 export * from './useRenderingByWindowSize'
 export * from './useStorage'
 export * from './useSetPageTitle'

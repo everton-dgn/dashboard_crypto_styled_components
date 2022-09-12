@@ -1,3 +1,4 @@
+export { default as BoxCircleCryptocurrency } from './BoxCircleCryptocurrency'
 export { default as CardLayout } from './CardLayout'
 export { default as CircleChartCripto } from './CircleChartCripto'
 export { default as MenuList } from './MenuList'

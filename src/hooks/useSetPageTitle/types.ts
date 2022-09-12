@@ -1,3 +1,3 @@
-export type UseSetPageTitleProps = {
+export type UseSetPageTitleType = {
   pageTitle: string
 }

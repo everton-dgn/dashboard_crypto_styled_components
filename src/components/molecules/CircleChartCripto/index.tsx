@@ -8,7 +8,7 @@ const CircleChartCripto = ({
 }: CircleChartCriptoProps) => {
   const convertsPercentageToChartFill = () => {
     const maximumValue = 244
-    return (maximumValue * totalPercentage) / 100
+    return maximumValue * (1 - totalPercentage / 100)
   }
 
   return (

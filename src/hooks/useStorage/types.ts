@@ -1,10 +1,10 @@
-export type useStorageProps = {
+export type useStorageType = {
   key: string
   initialValue?: any
   storage?: 'sessionStorage'
 }
 
-export type UseStorageType = {
+export type UseStorageReturnType = {
   getStorage: unknown
   setStorageState: (value: any) => void
 }

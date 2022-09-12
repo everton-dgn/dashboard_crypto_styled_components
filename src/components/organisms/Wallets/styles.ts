@@ -107,7 +107,7 @@ export const Name = styled.span`
   left: 16px;
 `
 
-export const ImageCredCard = styled.img.attrs({ fetchpriority: 'high' })`
+export const ImageCredCard = styled.img`
   display: flex;
   width: 100%;
   border: 1px solid #ffffff7b;

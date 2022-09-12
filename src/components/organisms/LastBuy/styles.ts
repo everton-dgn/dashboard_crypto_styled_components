@@ -3,12 +3,31 @@ import T from 'theme'
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-auto-flow: row;
-  column-gap: ${T.spacings.lg};
-  row-gap: ${T.spacings.md};
+  column-gap: ${T.spacings.md};
+  row-gap: ${T.spacings.lg};
   justify-content: space-between;
   align-items: center;
+
+  span {
+    display: none;
+  }
+
+  ${T.breakpoints.custom(1413)} {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    column-gap: ${T.spacings.xxs};
+
+    span {
+      display: flex;
+    }
+
+    span,
+    div,
+    button {
+      justify-self: center;
+    }
+  }
 `
 
 export const Crypto = styled.div`

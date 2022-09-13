@@ -54,6 +54,7 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100vh;
+    align-items: center;
     isolation: isolate;
   }
 

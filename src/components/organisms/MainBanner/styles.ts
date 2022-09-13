@@ -6,22 +6,12 @@ export const Container = styled.section`
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 26.2rem;
+  min-height: 26.2rem;
   border-radius: ${T.borderRadius.lg};
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   padding: ${T.grid.paddingDesktop};
   background: ${T.colors.backgroundBanner};
   overflow: hidden;
-`
-
-export const ImageNft = styled.img<{ opacity: number }>`
-  opacity: ${({ opacity }) => opacity};
-  display: flex;
-  width: 41.2rem;
-  height: 26.2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
 `
 
 export const Wrapper = styled.div`
@@ -33,7 +23,11 @@ export const Wrapper = styled.div`
   height: 100%;
   max-width: 100%;
   z-index: ${T.layerOrder.base};
-  justify-items: left;
+  justify-items: center;
+
+  ${T.breakpoints.custom(500)} {
+    justify-items: left;
+  }
 
   ${T.breakpoints.custom(1413)} {
     max-width: 50%;
@@ -47,6 +41,13 @@ export const WrapperText = styled.div`
 
   h1 {
     text-shadow: 0 1px 7px #001435;
+    text-align: center;
+  }
+
+  ${T.breakpoints.custom(500)} {
+    h1 {
+      text-align: left;
+    }
   }
 `
 
@@ -54,10 +55,24 @@ export const WrapperSubtitle = styled.div`
   display: grid;
   grid-template-columns: max-content max-content;
   gap: ${T.grid.gutterDesktop};
-  width: fit-content;
+  width: 100%;
   justify-content: center;
 
   h2 {
     text-shadow: 0 1px 7px #001435;
   }
+
+  ${T.breakpoints.custom(500)} {
+    width: fit-content;
+  }
+`
+
+export const ImageNft = styled.img<{ opacity: number }>`
+  opacity: ${({ opacity }) => opacity};
+  display: flex;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 `

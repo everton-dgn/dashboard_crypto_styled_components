@@ -26,6 +26,8 @@ export const AddButton = styled(C.IconButton)`
 
 export const Wrapper = styled.div`
   position: relative;
+  max-width: 33rem;
+  align-self: center;
 `
 
 export const Content = styled.div`

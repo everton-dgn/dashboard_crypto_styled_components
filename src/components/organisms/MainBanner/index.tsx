@@ -7,7 +7,12 @@ import { useRenderingByWindowSize } from 'hooks'
 const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
   const { windowSize } = useRenderingByWindowSize()
   const calculatesImageOpacity = (): number => {
-    return windowSize.custom(1290) ? 1 : 0.2
+    if (windowSize.custom(1330)) return 1
+    if (windowSize.custom(1200)) return 0.2
+    if (windowSize.custom(1027)) return 1
+    if (windowSize.custom(780)) return 0.2
+    if (windowSize.custom(650)) return 1
+    return 0.2
   }
 
   return (

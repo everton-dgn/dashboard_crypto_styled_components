@@ -6,6 +6,7 @@ export const Grid = styled.div`
   grid-template-columns: 1fr;
   column-gap: ${T.grid.gutterDesktop};
   width: 100%;
+  max-width: 167rem;
   min-height: 100vh;
   padding: ${T.grid.paddingDesktop};
   height: 100vh;
@@ -16,7 +17,7 @@ export const Grid = styled.div`
   }
 
   ${T.breakpoints.desktop} {
-    grid-template-columns: 23.2rem 1fr;
+    grid-template-columns: 28rem 1fr;
 
     aside {
       display: grid;

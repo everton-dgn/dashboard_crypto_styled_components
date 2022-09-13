@@ -18,12 +18,6 @@ export const WrapperText = styled.div`
   span:not(:last-child) {
     display: block;
     width: 120px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    font-weight: 500;
-    color: #798eae;
-    font-size: 1.2rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

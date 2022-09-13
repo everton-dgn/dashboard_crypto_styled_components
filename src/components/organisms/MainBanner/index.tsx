@@ -9,9 +9,9 @@ const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
   const calculatesImageOpacity = (): number => {
     if (windowSize.custom(1330)) return 1
     if (windowSize.custom(1200)) return 0.2
-    if (windowSize.custom(1027)) return 1
-    if (windowSize.custom(780)) return 0.2
-    if (windowSize.custom(650)) return 1
+    if (windowSize.custom(950)) return 1
+    if (windowSize.custom(785)) return 0.2
+    if (windowSize.custom(558)) return 1
     return 0.2
   }
 

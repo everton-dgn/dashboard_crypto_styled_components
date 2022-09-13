@@ -8,6 +8,7 @@ export const Container = styled.main`
   row-gap: ${T.grid.gutterTablet};
   column-gap: ${T.grid.gutterPhone};
   width: 100%;
+  max-width: 129.4rem;
 
   ${T.breakpoints.tablet} {
     gap: ${T.grid.gutterTablet};

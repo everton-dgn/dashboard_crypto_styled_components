@@ -6,11 +6,11 @@ export const Grid = styled.div`
   grid-template-columns: 1fr;
   column-gap: ${T.grid.gutterPhone};
   width: 100%;
-  max-width: 167rem;
   min-height: 100vh;
   padding: ${T.grid.paddingTablet} ${T.grid.paddingPhone};
   height: 100vh;
   overflow-y: auto;
+  justify-content: center;
 
   aside {
     display: none;
@@ -22,7 +22,7 @@ export const Grid = styled.div`
   }
 
   ${T.breakpoints.desktop} {
-    grid-template-columns: 28rem 1fr;
+    grid-template-columns: 28rem minmax(min-content, 129.4rem);
     padding: ${T.grid.paddingDesktop};
     column-gap: ${T.grid.gutterDesktop};
 

@@ -41,7 +41,9 @@ export const GlobalStyles = createGlobalStyle`
   select,
   textarea,
   button {
-    font: ${T.fonts.weights.medium} ${T.fonts.sizes.text5} Montserrat, sans-serif;
+    font: ${T.fonts.weights.medium} ${
+  T.fonts.sizes.text5
+} Montserrat, sans-serif;
   }
 
   button {
@@ -67,7 +69,7 @@ export const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar,
   scrollbar-width {
-    width: 7px;
+    width: 4px;
     background-color: ${T.colors.backgroundPage};
   }
 
@@ -78,7 +80,18 @@ export const GlobalStyles = createGlobalStyle`
 
   :root {
     scrollbar-color: ${T.colors.greyDynamic} ${T.colors.backgroundPage};
-    scrollbar-width: 7px;
+    scrollbar-width: 4px;
+  }
+
+  ${T.breakpoints.custom(450)} {
+    ::-webkit-scrollbar,
+    scrollbar-width {
+      width: 14px;
+    }
+
+    :root {
+      scrollbar-width: 14px;
+    }
   }
 
   ${ColorsTheme}

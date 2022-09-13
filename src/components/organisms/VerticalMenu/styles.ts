@@ -5,6 +5,7 @@ export const Container = styled.aside`
   display: grid;
   grid-template-columns: 100%;
   width: 100%;
+  max-width: 28rem;
   border-radius: ${T.borderRadius.lg};
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};

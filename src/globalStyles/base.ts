@@ -67,7 +67,7 @@ export const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar,
   scrollbar-width {
-    width: 16px !important;
+    width: 7px;
     background-color: ${T.colors.backgroundPage};
   }
 
@@ -77,8 +77,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    scrollbar-color: ${T.colors.greyDynamic} ${T.colors.backgroundPage} !important;
-    scrollbar-width: 16px !important;
+    scrollbar-color: ${T.colors.greyDynamic} ${T.colors.backgroundPage};
+    scrollbar-width: 7px;
   }
 
   ${ColorsTheme}

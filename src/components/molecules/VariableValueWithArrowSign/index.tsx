@@ -22,7 +22,7 @@ const VariableValueWithArrowSign = ({
       <C.Typography
         text={value}
         type={calcSizeText()}
-        as="span"
+        as="p"
         color={color || T.colors.textQuaternary}
         weight={500}
       />

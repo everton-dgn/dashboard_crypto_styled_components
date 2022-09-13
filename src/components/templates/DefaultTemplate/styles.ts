@@ -8,7 +8,7 @@ export const Grid = styled.div`
   width: 100%;
   max-width: 167rem;
   min-height: 100vh;
-  padding: ${T.grid.paddingPhone};
+  padding: ${T.grid.paddingTablet} ${T.grid.paddingPhone};
   height: 100vh;
   overflow-y: auto;
 

@@ -6,15 +6,15 @@ export const Container = styled.section`
   flex-direction: column;
   position: relative;
   width: 100%;
-  min-height: 26.2rem;
+  height: fit-content;
   border-radius: ${T.borderRadius.lg};
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
-  padding: ${T.grid.paddingPhone};
+  padding: ${T.grid.paddingDesktop} ${T.grid.paddingPhone};
   background: ${T.colors.backgroundBanner};
   overflow: hidden;
 
   ${T.breakpoints.tablet} {
-    padding: ${T.grid.paddingTablet};
+    padding: ${T.grid.paddingDesktop} ${T.grid.paddingTablet};
   }
 
   ${T.breakpoints.desktop} {

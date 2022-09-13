@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     word-wrap: initial;
   }
 
-  ${T.breakpoints.custom(1360)} {
+  ${T.breakpoints.custom(1444)} {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;

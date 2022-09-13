@@ -5,7 +5,8 @@ export const Container = styled.main`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: max-content;
-  gap: ${T.grid.gutterPhone};
+  row-gap: ${T.grid.gutterTablet};
+  column-gap: ${T.grid.gutterPhone};
   width: 100%;
 
   ${T.breakpoints.tablet} {
@@ -25,7 +26,8 @@ export const MainLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: max-content;
-  gap: ${T.grid.gutterPhone};
+  row-gap: ${T.grid.gutterTablet};
+  column-gap: ${T.grid.gutterPhone};
   width: 100%;
 
   ${T.breakpoints.tablet} {
@@ -40,7 +42,8 @@ export const MainLayout = styled.div`
 export const WrapperCharts = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: ${T.grid.gutterPhone};
+  row-gap: ${T.grid.gutterTablet};
+  column-gap: ${T.grid.gutterPhone};
 
   section:first-child {
     min-height: 25.1rem;
@@ -64,7 +67,8 @@ export const SecondaryLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: max-content;
-  gap: ${T.grid.gutterPhone};
+  row-gap: ${T.grid.gutterTablet};
+  column-gap: ${T.grid.gutterPhone};
   width: 100%;
 
   ${T.breakpoints.tablet} {

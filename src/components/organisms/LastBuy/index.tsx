@@ -32,7 +32,9 @@ const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
           )
         )}
         <C.IconButton
-          icon={<C.BoxIconCrypto svgIcon={<AddCriptocurrency />} />}
+          icon={
+            <C.BoxIconCrypto svgIcon={<AddCriptocurrency />} noMove={true} />
+          }
           ariaLabel="Add cryptocurrency"
           size="30px"
         />

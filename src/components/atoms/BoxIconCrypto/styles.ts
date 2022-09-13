@@ -1,14 +1,18 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import T from 'theme'
 
-export const Container = styled.div`
+export const Container = styled.div<{ noMove?: boolean }>`
   display: grid;
   place-content: center;
   width: 30px;
   height: 30px;
 
   &:hover svg {
-    transform: translateY(-2px);
+    ${({ noMove }) =>
+      !noMove &&
+      css`
+        transform: translateY(-2px);
+      `};
     filter: drop-shadow(0 0 0 ${T.colors.white});
   }
 

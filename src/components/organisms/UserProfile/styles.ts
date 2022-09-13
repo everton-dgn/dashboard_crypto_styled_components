@@ -17,7 +17,7 @@ export const WrapperText = styled.div`
 
   span:not(:last-child) {
     display: block;
-    width: 150px;
+    width: 120px;
     text-align: left;
     padding: 0;
     margin: 0;
@@ -27,6 +27,12 @@ export const WrapperText = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  ${T.breakpoints.custom(364)} {
+    span:not(:last-child) {
+      width: 150px;
+    }
   }
 
   ${T.breakpoints.custom(400)} {

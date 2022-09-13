@@ -41,7 +41,7 @@ export const Content = styled.div`
   svg:nth-child(4) {
     width: 42px;
     height: 14px;
-    bottom: 18px;
+    bottom: 21px;
     right: 16px;
     position: absolute;
   }
@@ -89,13 +89,18 @@ export const Logotipo = styled(IconLogo)`
 `
 
 export const ValueInTheWallet = styled.span`
-  font-size: 29px;
+  font-size: 24px;
   font-weight: ${T.fonts.weights.medium};
   color: ${T.colors.white};
   text-shadow: 0 1px 2px #0000004c;
   position: absolute;
-  bottom: 58px;
+  bottom: 48px;
   left: 16px;
+
+  ${T.breakpoints.custom(380)} {
+    bottom: 58px;
+    font-size: 29px;
+  }
 `
 
 export const Name = styled.span`

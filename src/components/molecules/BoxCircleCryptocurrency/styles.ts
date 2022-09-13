@@ -8,7 +8,7 @@ export const WrapperBoxCrypto = styled.div`
   justify-content: center;
   align-items: center;
 
-  ${T.breakpoints.custom(450)} {
+  ${T.breakpoints.custom(350)} {
     grid-template-columns: max-content;
     gap: ${T.spacings.xs};
   }
@@ -26,7 +26,7 @@ export const WrapperText = styled.div`
     justify-content: left;
   }
 
-  ${T.breakpoints.custom(450)} {
+  ${T.breakpoints.custom(350)} {
     order: inherit;
     justify-content: center;
     height: inherit;

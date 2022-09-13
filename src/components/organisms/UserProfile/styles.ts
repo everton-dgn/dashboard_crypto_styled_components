@@ -44,11 +44,35 @@ export const WrapperText = styled.div`
 
 export const WrapperPremium = styled.div`
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: max-content;
   grid-auto-rows: max-content;
   column-gap: ${T.spacings.xxs};
   align-items: center;
-  margin-top: 3px;
+  position: relative;
+  bottom: -2px;
+  left: -25px;
+
+  span {
+    display: none;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  ${T.breakpoints.tablet} {
+    grid-template-columns: max-content max-content;
+    bottom: inherit;
+    left: inherit;
+
+    span {
+      display: flex;
+    }
+
+    img {
+      position: relative;
+    }
+  }
 `
 
 export const WrapperIcons = styled.div`

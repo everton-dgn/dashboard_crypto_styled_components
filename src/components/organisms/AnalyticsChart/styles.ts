@@ -8,7 +8,7 @@ export const WrapperChart = styled.div`
   row-gap: ${T.spacings.xm};
   justify-items: left;
 
-  ${T.breakpoints.custom(450)} {
+  ${T.breakpoints.custom(350)} {
     grid-template-columns: max-content max-content max-content;
     justify-content: space-between;
   }

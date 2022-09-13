@@ -28,7 +28,7 @@ export const Header = styled.div`
   width: 100%;
   min-height: 2.4rem;
   height: fit-content;
-  margin-bottom: ${T.grid.gutterPhone};
+  margin-bottom: ${T.grid.gutterTablet};
 
   button {
     transform: translateX(6px);

@@ -3,7 +3,7 @@ import * as S from './styles'
 import { SwitchProps } from './types'
 
 const Switch = ({ id, initialValue, onClick, ariaLabel }: SwitchProps) => {
-  const [checked, setChecked] = useState(!!initialValue)
+  const [checked, setChecked] = useState(initialValue)
 
   const handle = () => {
     setChecked(prevState => !prevState)

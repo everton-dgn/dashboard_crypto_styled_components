@@ -8,8 +8,16 @@ export const Container = styled.section`
   border-radius: ${T.borderRadius.lg};
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
-  padding: ${T.grid.paddingDesktop};
+  padding: ${T.grid.paddingPhone};
   overflow: hidden;
+
+  ${T.breakpoints.tablet} {
+    padding: ${T.grid.paddingTablet};
+  }
+
+  ${T.breakpoints.desktop} {
+    padding: ${T.grid.paddingDesktop};
+  }
 `
 
 export const Header = styled.div`
@@ -20,9 +28,21 @@ export const Header = styled.div`
   width: 100%;
   min-height: 2.4rem;
   height: fit-content;
-  margin-bottom: ${T.grid.gutterDesktop};
+  margin-bottom: ${T.grid.gutterPhone};
 
   button {
-    transform: translateX(10px);
+    transform: translateX(6px);
+  }
+
+  ${T.breakpoints.tablet} {
+    margin-bottom: ${T.grid.gutterTablet};
+
+    button {
+      transform: translateX(10px);
+    }
+  }
+
+  ${T.breakpoints.desktop} {
+    margin-bottom: ${T.grid.gutterDesktop};
   }
 `

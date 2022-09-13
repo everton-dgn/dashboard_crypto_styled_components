@@ -3,10 +3,12 @@ import { useStorage } from 'hooks'
 import { UseThemeType } from './types'
 
 export const useTheme = (): UseThemeType => {
-  const { getStorage: isDarkMode, setStorageState: changeTheme } = useStorage({
+  const { getStorage, setStorageState: changeTheme } = useStorage({
     key: 'isDark',
-    initialValue: false
+    initialValue: true
   })
+
+  const isDarkMode = !!getStorage
 
   const theme = isDarkMode ? 'dark' : 'light'
 
@@ -21,5 +23,5 @@ export const useTheme = (): UseThemeType => {
     changeTheme(!isDarkMode)
   }
 
-  return { theme, setTheme, isDarkMode }
+  return { setTheme, isDarkMode }
 }

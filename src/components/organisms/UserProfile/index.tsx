@@ -23,7 +23,7 @@ const UserProfile = ({ userData }: UserProfileProps) => {
             weight={500}
           />
           <C.Typography
-            text={`${userData.email.slice(0, 19)}...`}
+            text={`${userData.email}`}
             type="text6"
             as="span"
             weight={500}

@@ -6,7 +6,7 @@ import artificialIntelligence from 'assets/images/artificialIntelligence.webp'
 import { LIST_MENU_DATA } from 'fakeApi'
 
 const VerticalMenu = () => {
-  const { theme, setTheme, isDarkMode } = useTheme()
+  const { setTheme, isDarkMode } = useTheme()
 
   return (
     <S.Container>
@@ -46,12 +46,12 @@ const VerticalMenu = () => {
         <S.WrapperSwitch>
           <C.Switch
             id="changeTheme"
-            initialValue={!!isDarkMode}
+            initialValue={isDarkMode}
             onClick={setTheme}
-            ariaLabel={`Switch to ${theme}`}
+            ariaLabel={`Switch to ${isDarkMode ? 'light' : 'dark'}`}
           />
           <C.Typography
-            text={`Switch to ${theme}`}
+            text={`Switch to ${isDarkMode ? 'light' : 'dark'}`}
             type="text6"
             as="p"
             color={T.colors.grey}

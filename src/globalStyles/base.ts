@@ -58,6 +58,7 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     align-items: center;
     isolation: isolate;
+    position: relative;
   }
 
   a,

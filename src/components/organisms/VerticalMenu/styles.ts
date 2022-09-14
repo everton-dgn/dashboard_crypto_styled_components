@@ -1,20 +1,31 @@
 import styled from 'styled-components'
 import T from 'theme'
 
-export const Container = styled.aside`
+export const Container = styled.aside<{ isOpenMenu: boolean }>`
   display: grid;
   grid-template-columns: 100%;
   width: 100%;
   max-width: 28rem;
-  border-radius: ${T.borderRadius.lg};
+  border-radius: 0;
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
-  padding: ${T.grid.paddingDesktop} 0;
-  position: sticky;
-  top: 0;
-  left: 0;
+  padding: 10px 0 ${T.grid.paddingDesktop};
   height: calc(100vh - 60px);
   overflow-y: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: ${T.layerOrder.sidebar};
+  transition: all 0.3s ease-in-out;
+  transform: translateX(${({ isOpenMenu }) => (isOpenMenu ? '0' : '-100%')});
+
+  ${T.breakpoints.desktop} {
+    display: grid;
+    position: sticky;
+    border-radius: ${T.borderRadius.lg};
+    padding: ${T.grid.paddingDesktop} 0;
+    transform: inherit;
+  }
 `
 
 export const Content = styled.nav`
@@ -22,6 +33,13 @@ export const Content = styled.nav`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-top: 0;
+
+  ${T.breakpoints.desktop} {
+    & > svg {
+      padding-left: ${T.grid.paddingDesktop};
+    }
+  }
 `
 
 export const WrapperHelp = styled.div`
@@ -45,6 +63,8 @@ export const ImageBegin = styled.img`
   display: flex;
   width: 100%;
   height: auto;
+  max-width: 232px;
+  margin: 0 auto;
 `
 
 export const WrapperTextFooter = styled(WrapperTextHelp)`

@@ -4,7 +4,7 @@ import * as S from './styles'
 import * as C from 'components'
 import { MenuListProps } from './types'
 
-const MenuList = ({ dataListMenu }: MenuListProps) => {
+const MenuList = ({ dataListMenu, onOpenMenu }: MenuListProps) => {
   const [activeItem, setActiveItem] = useState<number | null>(0)
 
   const handleSetActiveItem = useCallback(
@@ -21,7 +21,10 @@ const MenuList = ({ dataListMenu }: MenuListProps) => {
           <S.NavLink
             to={route}
             active={`${activeItem === i}`}
-            onClick={() => handleSetActiveItem(i)}
+            onClick={() => {
+              handleSetActiveItem(i)
+              onOpenMenu()
+            }}
           >
             {icon}
             <C.Typography

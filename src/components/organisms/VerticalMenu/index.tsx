@@ -1,22 +1,28 @@
-import * as C from 'components'
 import * as S from './styles'
-import T from 'theme'
-import { useTheme } from 'hooks'
-import artificialIntelligence from 'assets/images/artificialIntelligence.webp'
+import * as C from 'components'
+import { useRenderingByWindowSize, useTheme } from 'hooks'
 import { LIST_MENU_DATA } from 'fakeApi'
+import artificialIntelligence from 'assets/images/artificialIntelligence.webp'
+import T from 'theme'
+import { VerticalMenuProps } from './types'
 
-const VerticalMenu = () => {
+const VerticalMenu = ({ isOpenMenu, onOpenMenu }: VerticalMenuProps) => {
   const { setTheme, isDarkMode } = useTheme()
+  const { windowSize } = useRenderingByWindowSize()
 
   return (
-    <S.Container>
+    <S.Container isOpenMenu={isOpenMenu}>
       <S.Content>
-        <C.Logo />
+        {windowSize.lg && <C.Logo size="medium" />}
 
-        <C.MenuList dataListMenu={LIST_MENU_DATA} />
+        <C.MenuList
+          onOpenMenu={onOpenMenu}
+          dataListMenu={LIST_MENU_DATA}
+          aria-hidden={!isOpenMenu}
+        />
       </S.Content>
 
-      <S.WrapperHelp>
+      <S.WrapperHelp aria-hidden={!isOpenMenu}>
         <S.WrapperTextHelp>
           <C.Typography
             text="Need Help?"
@@ -42,7 +48,7 @@ const VerticalMenu = () => {
         />
       </S.WrapperHelp>
 
-      <S.WrapperTextFooter>
+      <S.WrapperTextFooter aria-hidden={!isOpenMenu}>
         <S.WrapperSwitch>
           <C.Switch
             id="changeTheme"

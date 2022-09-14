@@ -8,4 +8,5 @@ type ListItemsType = {
 
 export type MenuListProps = {
   dataListMenu: ListItemsType[]
+  onOpenMenu: () => void
 }

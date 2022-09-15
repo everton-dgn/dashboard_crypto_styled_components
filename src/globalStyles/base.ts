@@ -84,7 +84,7 @@ export const GlobalStyles = createGlobalStyle`
     scrollbar-width: 4px;
   }
 
-  ${T.breakpoints.custom(450)} {
+  ${T.breakpoints.custom(1000)} {
     ::-webkit-scrollbar,
     scrollbar-width {
       width: 14px;

@@ -5,9 +5,15 @@ import { Link } from 'react-router-dom'
 export const NavList = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: ${T.spacings.sm};
+  row-gap: ${T.spacings.xxs};
   width: 100%;
-  padding: ${T.grid.paddingDesktop} ${T.spacings.sm} 40px ${T.spacings.sm};
+  padding: ${T.grid.paddingDesktop} ${T.spacings.sm} ${T.spacings.lg}
+    ${T.spacings.sm};
+
+  ${T.breakpoints.tablet} {
+    row-gap: ${T.spacings.sm};
+    padding: ${T.grid.paddingDesktop} ${T.spacings.sm} 40px ${T.spacings.sm};
+  }
 `
 
 export const Item = styled.li`

@@ -9,7 +9,7 @@ export const Container = styled.aside<{ isOpenMenu: boolean }>`
   border-radius: 0;
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
-  padding: 10px 0 ${T.grid.paddingDesktop};
+  padding: 0 0 ${T.grid.paddingDesktop};
   height: calc(100vh - 60px);
   overflow-y: auto;
   position: absolute;
@@ -25,6 +25,8 @@ export const Container = styled.aside<{ isOpenMenu: boolean }>`
     border-radius: ${T.borderRadius.lg};
     padding: ${T.grid.paddingDesktop} 0;
     transform: inherit;
+    top: 0;
+    bottom: inherit;
   }
 `
 
@@ -48,7 +50,11 @@ export const WrapperHelp = styled.div`
   width: 100%;
   justify-content: center;
   flex-grow: 1;
-  margin-bottom: 30px;
+  margin-bottom: ${T.spacings.lg};
+
+  ${T.breakpoints.desktop} {
+    margin-bottom: 20px;
+  }
 `
 
 export const WrapperTextHelp = styled.div`

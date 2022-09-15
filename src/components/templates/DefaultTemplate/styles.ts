@@ -7,7 +7,7 @@ export const Grid = styled.div`
   column-gap: ${T.grid.gutterPhone};
   width: 100%;
   min-height: 100vh;
-  padding: 60px ${T.grid.paddingPhone} ${T.grid.paddingTablet}
+  padding: 80px ${T.grid.paddingPhone} ${T.grid.paddingTablet}
     ${T.grid.paddingPhone};
   height: 100vh;
   overflow-y: auto;

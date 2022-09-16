@@ -1,17 +1,21 @@
-import * as S from './styles'
-import * as C from 'components'
-import { useRenderingByWindowSize, useTheme } from 'hooks'
-import { LIST_MENU_DATA } from 'fakeApi'
 import artificialIntelligence from 'assets/images/artificialIntelligence.webp'
+import * as C from 'components'
+import { LIST_MENU_DATA } from 'fakeApi'
+import { useRenderingByWindowSize, useTheme } from 'hooks'
 import T from 'theme'
+import * as S from './styles'
 import { VerticalMenuProps } from './types'
 
-const VerticalMenu = ({ isOpenMenu, onOpenMenu }: VerticalMenuProps) => {
+const VerticalMenu = ({
+  isOpenMenu,
+  onOpenMenu,
+  startAnimation
+}: VerticalMenuProps) => {
   const { setTheme, isDarkMode } = useTheme()
   const { windowSize } = useRenderingByWindowSize()
 
   return (
-    <S.Container isOpenMenu={isOpenMenu} aria-hidden={!isOpenMenu}>
+    <S.Container isOpenMenu={startAnimation} aria-hidden={!isOpenMenu}>
       <S.Content>
         {windowSize.lg && <C.Logo size="medium" />}
 

@@ -1,22 +1,33 @@
-import { useRenderingByWindowSize } from 'hooks'
-import { useCallback, useState } from 'react'
+import { useAnimation, useRenderingByWindowSize } from 'hooks'
+import { useCallback } from 'react'
 import { Outlet } from 'react-router-dom'
 import * as S from './styles'
 import * as C from 'components'
 
 const DefaultTemplate = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
   const { windowSize } = useRenderingByWindowSize()
+  const { isMountedComponent, toggleComponentMount, isStartAnimation } =
+    useAnimation({
+      timeInMillisecondsToDisassembleComponent: 300,
+      initialState: false,
+      disableHook: windowSize.lg
+    })
 
   const onOpenMenu = useCallback(() => {
-    setIsOpenMenu(prevState => !prevState)
-  }, [])
+    toggleComponentMount()
+  }, [toggleComponentMount])
 
   return (
     <>
       {!windowSize.lg && <C.TopBar onClick={onOpenMenu} />}
       <S.Grid>
-        <C.VerticalMenu isOpenMenu={isOpenMenu} onOpenMenu={onOpenMenu} />
+        {isMountedComponent && (
+          <C.VerticalMenu
+            isOpenMenu={isMountedComponent}
+            onOpenMenu={onOpenMenu}
+            startAnimation={isStartAnimation}
+          />
+        )}
         <Outlet />
       </S.Grid>
     </>

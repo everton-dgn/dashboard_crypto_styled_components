@@ -7,10 +7,11 @@ export const animations = {
       max-width: 28rem;
     }
     60% {
+      transform: translate3d(0, 0, 0);
       max-width: 30rem;
-      transform: translate3d(0%, 0, 0);
     }
     100% {
+      transform: translate3d(0, 0, 0);
       max-width: 28rem;
     }
   `,

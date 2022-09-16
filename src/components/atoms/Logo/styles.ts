@@ -5,8 +5,8 @@ import { Sizes } from './types'
 
 const sizes = {
   small: css`
-    width: 129px;
-    height: 40px;
+    width: 123px;
+    height: 35px;
   `,
   medium: css`
     width: 196px;

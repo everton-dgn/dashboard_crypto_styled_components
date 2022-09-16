@@ -11,9 +11,10 @@ export const TopBar = styled.div`
   height: 6rem;
   align-items: center;
   padding: 0 ${T.grid.paddingPhone};
-  border-bottom: 1px solid #ffffffa8;
+  border-bottom: 0.5px solid ${T.colors.white};
   justify-content: space-between;
   z-index: ${T.layerOrder.sidebar};
+  box-shadow: 0 4px 15px 0 ${T.colors.shadow};
 
   ${T.breakpoints.tablet} {
     padding: 0 ${T.grid.paddingDesktop};

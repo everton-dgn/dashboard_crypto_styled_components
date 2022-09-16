@@ -11,15 +11,11 @@ const VerticalMenu = ({ isOpenMenu, onOpenMenu }: VerticalMenuProps) => {
   const { windowSize } = useRenderingByWindowSize()
 
   return (
-    <S.Container isOpenMenu={isOpenMenu}>
+    <S.Container isOpenMenu={isOpenMenu} aria-hidden={!isOpenMenu}>
       <S.Content>
         {windowSize.lg && <C.Logo size="medium" />}
 
-        <C.MenuList
-          onOpenMenu={onOpenMenu}
-          dataListMenu={LIST_MENU_DATA}
-          aria-hidden={!isOpenMenu}
-        />
+        <C.MenuList onOpenMenu={onOpenMenu} dataListMenu={LIST_MENU_DATA} />
       </S.Content>
 
       <S.WrapperHelp aria-hidden={!isOpenMenu}>
@@ -48,7 +44,7 @@ const VerticalMenu = ({ isOpenMenu, onOpenMenu }: VerticalMenuProps) => {
         />
       </S.WrapperHelp>
 
-      <S.WrapperTextFooter aria-hidden={!isOpenMenu}>
+      <S.WrapperTextFooter>
         <S.WrapperSwitch>
           <C.Switch
             id="changeTheme"

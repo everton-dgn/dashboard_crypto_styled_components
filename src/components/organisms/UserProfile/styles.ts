@@ -49,8 +49,8 @@ export const WrapperPremium = styled.div`
   column-gap: ${T.spacings.xxs};
   align-items: center;
   position: relative;
-  bottom: -2px;
-  left: -25px;
+  bottom: -1px;
+  left: -27px;
 
   span {
     display: none;
@@ -92,6 +92,11 @@ export const WrapperIcons = styled.div`
 
 export const Image = styled.img`
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
+
+  ${T.breakpoints.tablet} {
+    width: 13px;
+    height: 13px;
+  }
 `

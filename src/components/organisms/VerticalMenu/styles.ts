@@ -16,8 +16,9 @@ export const Container = styled.aside<{ isOpenMenu: boolean }>`
   left: 0;
   bottom: 0;
   z-index: ${T.layerOrder.sidebar};
-  transition: all 0.3s ease-in-out;
-  transform: translateX(${({ isOpenMenu }) => (isOpenMenu ? '0' : '-100%')});
+  animation: ${({ isOpenMenu }) =>
+      isOpenMenu ? T.animations.openSideBar : T.animations.closeSideBar}
+    0.3s ease-in-out forwards;
 
   ${T.breakpoints.desktop} {
     display: grid;
@@ -27,6 +28,7 @@ export const Container = styled.aside<{ isOpenMenu: boolean }>`
     transform: inherit;
     top: 0;
     bottom: inherit;
+    animation: none;
   }
 `
 

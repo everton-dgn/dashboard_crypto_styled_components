@@ -12,6 +12,7 @@ const QuickTransfer = ({
   quickTransferData
 }: QuickTransferProps) => {
   const [numberOfItems, setNumberOfItems] = useState(initialState)
+  const [isLoading, setIsLoading] = useState(false)
 
   const isEntireListIsDisplayed = () => {
     return numberOfItems === quickTransferData.length
@@ -23,11 +24,17 @@ const QuickTransfer = ({
 
   const increaseNumberOfItems = () => {
     if (isEntireListIsDisplayed()) return
-    if (amountOfItemsRemainingInList() < increment) {
-      setNumberOfItems(prevState => prevState + amountOfItemsRemainingInList())
-    } else {
-      setNumberOfItems(prevState => prevState + 3)
-    }
+    setIsLoading(true)
+    setTimeout(() => {
+      if (amountOfItemsRemainingInList() < increment) {
+        setNumberOfItems(
+          prevState => prevState + amountOfItemsRemainingInList()
+        )
+      } else {
+        setNumberOfItems(prevState => prevState + 3)
+      }
+      setIsLoading(false)
+    }, 1500)
   }
 
   const calculatesWhenToShowTheViewMoreButton = () => {
@@ -66,13 +73,17 @@ const QuickTransfer = ({
         {calculatesWhenToShowTheViewMoreButton() && (
           <>
             <S.WrapperButton>
-              <C.Button
-                text="View more"
-                aria-label="View more"
-                size="small"
-                color="primary"
-                onClick={increaseNumberOfItems}
-              />
+              {isLoading ? (
+                <C.Load size={30} />
+              ) : (
+                <C.Button
+                  text="View more"
+                  aria-label="View more"
+                  size="small"
+                  color="primary"
+                  onClick={increaseNumberOfItems}
+                />
+              )}
             </S.WrapperButton>
             <S.WrapperViewMore />
           </>

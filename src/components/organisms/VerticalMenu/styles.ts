@@ -15,7 +15,7 @@ export const Container = styled.aside<{ isOpenMenu: boolean }>`
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: ${T.layerOrder.sidebar};
+  z-index: ${T.layerOrder.sideBar};
   animation: ${({ isOpenMenu }) =>
       isOpenMenu ? T.animations.openSideBar : T.animations.closeSideBar}
     0.3s ease-in-out forwards;

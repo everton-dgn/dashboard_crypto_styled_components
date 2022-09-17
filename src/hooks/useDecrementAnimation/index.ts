@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import { UseDecrementAnimationType } from './types'
 
-export const useDecrementAnimation = ({ total }: UseDecrementAnimationType) => {
+export const useDecrementAnimation = ({
+  total,
+  disable = false
+}: UseDecrementAnimationType) => {
   const [currentValue, setCurrentValue] = useState(0)
   const timer = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
+    if (disable) return
     const stepTime = () => {
       const durationFactor = 1400
       const percent = (100 * currentValue) / total
@@ -21,7 +25,9 @@ export const useDecrementAnimation = ({ total }: UseDecrementAnimationType) => {
         setCurrentValue(prevState => prevState + 1)
       }, stepTime())
     }
-  }, [currentValue, total])
+  }, [currentValue, disable, total])
+
+  if (disable) return total
 
   return currentValue
 }

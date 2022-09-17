@@ -1,6 +1,6 @@
 import * as C from 'components'
 import { currencyFormatter } from 'data/currencyFormatter'
-import { useDecrementAnimation } from 'hooks'
+import { useDecrementAnimation, useRenderingByWindowSize } from 'hooks'
 import T from 'theme'
 import * as S from './styles'
 import { BoxCircleCryptocurrencyProps } from './types'
@@ -11,7 +11,11 @@ const BoxCircleCryptocurrency = ({
   price,
   icon
 }: BoxCircleCryptocurrencyProps) => {
-  const currentPercent = useDecrementAnimation({ total: totalPercentage })
+  const { windowSize } = useRenderingByWindowSize()
+  const currentPercent = useDecrementAnimation({
+    total: totalPercentage,
+    disable: !windowSize.lg && !windowSize.md
+  })
 
   return (
     <S.WrapperBoxCrypto key={name}>

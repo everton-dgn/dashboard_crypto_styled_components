@@ -28,12 +28,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "yarn lint",
-      "yarn lint:css"
-    ]
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

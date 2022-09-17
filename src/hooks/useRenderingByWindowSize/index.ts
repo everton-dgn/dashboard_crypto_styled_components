@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { debounce } from 'helpFunctions'
 import T from 'theme'
 import { GetWindowSizeType, UseRenderingByWindowSizeType } from './types'
 
@@ -18,11 +19,8 @@ export const useRenderingByWindowSize = (): UseRenderingByWindowSizeType => {
   )
 
   useEffect(function setBreakpointByWindowWidth() {
-    const changeWindowSize = () => {
-      setWindowSize(getWindowSize())
-    }
-
-    window.addEventListener('resize', changeWindowSize)
+    const changeWindowSize = () => setWindowSize(getWindowSize())
+    window.addEventListener('resize', debounce(changeWindowSize, 200))
     return () => window.removeEventListener('resize', changeWindowSize)
   }, [])
 

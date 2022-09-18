@@ -55,9 +55,10 @@ export const WrapperButton = styled.div`
   left: 0;
   bottom: 0;
   overflow: hidden;
-  height: 120px;
+  height: 110px;
   border-radius: 0 0 ${T.borderRadius.lg} ${T.borderRadius.lg};
   align-items: end;
+  background: ${T.colors.blur};
 
   & > *:first-child {
     z-index: ${T.layerOrder.base};
@@ -75,10 +76,10 @@ export const WrapperButton = styled.div`
 
 export const WrapperViewMore = styled.span`
   position: absolute;
-  background: ${T.colors.blur};
   filter: blur(21px);
   left: 0;
-  bottom: 0;
+  bottom: 2px;
   width: 100%;
-  height: 100px;
+  height: 75px;
+  background: ${T.colors.blur};
 `

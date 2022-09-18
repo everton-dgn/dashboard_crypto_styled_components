@@ -1,10 +1,10 @@
+import { ReactComponent as IconArrowEast } from 'assets/icons/arrowEast.svg'
+import * as C from 'components'
 import { creditCardNumberFormatter } from 'data/creditCardNumberFormatter'
 import { useState } from 'react'
-import * as S from './styles'
-import * as C from 'components'
 import T from 'theme'
+import * as S from './styles'
 import { QuickTransferProps } from './types'
-import { ReactComponent as IconArrowEast } from 'assets/icons/arrowEast.svg'
 
 const QuickTransfer = ({
   initialState,
@@ -42,7 +42,11 @@ const QuickTransfer = ({
   }
 
   return (
-    <C.CardLayout title="QUICK TRANSFER" optionsMenu={[]}>
+    <C.CardLayout
+      title="QUICK TRANSFER"
+      optionsMenu={[]}
+      positionRelative={true}
+    >
       <S.Wrapper paddingBottom={calculatesWhenToShowTheViewMoreButton()}>
         {quickTransferData
           .slice(0, numberOfItems)

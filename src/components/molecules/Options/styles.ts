@@ -30,7 +30,7 @@ export const Menu = styled.div<{ startAnimation: boolean }>`
     0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
   ${T.breakpoints.tablet} {
-    right: -9px;
+    right: -10px;
   }
 `
 

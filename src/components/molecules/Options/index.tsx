@@ -29,7 +29,7 @@ const Options = () => {
               tabIndex={0}
               aria-label="Options"
             >
-              Options
+              <C.Typography text="Options" type="text5" as="span" />
             </S.Item>
             <S.Item
               onClick={toggleComponentMount}
@@ -37,7 +37,7 @@ const Options = () => {
               tabIndex={0}
               aria-label="Options"
             >
-              Options
+              <C.Typography text="Options" type="text5" as="span" />
             </S.Item>
             <S.Item
               onClick={toggleComponentMount}
@@ -45,7 +45,7 @@ const Options = () => {
               tabIndex={0}
               aria-label="Options"
             >
-              Options
+              <C.Typography text="Options" type="text5" as="span" />
             </S.Item>
             <S.Item
               onClick={toggleComponentMount}
@@ -53,7 +53,7 @@ const Options = () => {
               tabIndex={0}
               aria-label="Options"
             >
-              Options
+              <C.Typography text="Options" type="text5" as="span" />
             </S.Item>
             <S.Item
               onClick={toggleComponentMount}
@@ -61,7 +61,7 @@ const Options = () => {
               tabIndex={0}
               aria-label="Options"
             >
-              Options
+              <C.Typography text="Options" type="text5" as="span" />
             </S.Item>
           </S.Menu>
         )}

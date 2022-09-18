@@ -76,14 +76,18 @@ export const WrapperPremium = styled.div`
 `
 
 export const WrapperIcons = styled.div`
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-auto-rows: max-content;
-  column-gap: ${T.spacings.sm};
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
   align-items: center;
   align-self: flex-start;
   margin-left: auto;
   transform: translateX(6px);
+  z-index: ${T.layerOrder.options};
+
+  & > button {
+    margin-left: ${T.spacings.sm};
+  }
 
   ${T.breakpoints.tablet} {
     transform: translateX(10px);

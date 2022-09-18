@@ -1,7 +1,9 @@
 import { ReactNode } from 'react'
 
 export type CardLayoutProps = {
+  children: ReactNode
   title?: string
   optionsMenu?: []
-  children: ReactNode
+  overflowHidden?: boolean
+  positionRelative?: boolean
 }

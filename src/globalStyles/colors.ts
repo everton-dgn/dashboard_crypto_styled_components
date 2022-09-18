@@ -12,7 +12,7 @@ export const ColorsTheme = css`
     --colors-logo: #12284c;
     --colors-chart: #00e0ff;
     --colors-shadow: #0b226619;
-    --colors-blur: linear-gradient(180deg, #ffffffd3 -132%, #ffffff 120%);
+    --colors-blur: linear-gradient(180deg, transparent 6%, #ffffff 48%);
     --colors-gradient-overlay: radial-gradient(
       50% 50% at 50% 50%,
       #ebeef600 59%,
@@ -31,7 +31,7 @@ export const ColorsTheme = css`
     --colors-logo: #ffffff;
     --colors-chart: #ffffff;
     --colors-shadow: transparent;
-    --colors-blur: linear-gradient(180deg, #12284cd3 -132%, #151928 120%);
+    --colors-blur: linear-gradient(180deg, transparent 6%, #151928c1 41%);
     --colors-gradient-overlay: radial-gradient(
       50% 50% at 50% 50%,
       #00000000 59%,

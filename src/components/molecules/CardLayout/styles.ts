@@ -1,7 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import T from 'theme'
 
-export const Container = styled.section`
+export const Container = styled.section<{
+  overflowHidden?: boolean
+  positionRelative?: boolean
+}>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9,7 +12,10 @@ export const Container = styled.section`
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
   padding: ${T.grid.paddingPhone};
-  position: relative;
+  ${({ overflowHidden, positionRelative }) => css`
+    overflow: ${overflowHidden ? 'hidden' : 'visible'};
+    position: ${positionRelative ? 'relative' : 'inherit'};
+  `}
 
   ${T.breakpoints.tablet} {
     padding: ${T.grid.paddingTablet};

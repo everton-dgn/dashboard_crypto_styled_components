@@ -45,7 +45,7 @@ const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
   const toCurrency = (decimal: number) => currencyFormatter(decimal, 0)
 
   return (
-    <C.CardLayout title="STATISTICS" optionsMenu={[]}>
+    <C.CardLayout title="STATISTICS" optionsMenu={[]} overflowHidden={true}>
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           data={chartData}

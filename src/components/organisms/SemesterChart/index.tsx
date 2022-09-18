@@ -46,7 +46,7 @@ const SemesterChart = ({ chartData }: SemesterChartProps) => {
     .reduce((acc, cur) => cur + acc)
 
   return (
-    <C.CardLayout title="SEMESTER" optionsMenu={[]}>
+    <C.CardLayout title="SEMESTER" optionsMenu={[]} overflowHidden={true}>
       <S.Wrapper>
         <S.ContentTotalYield>
           <C.VariableValueWithArrowSign

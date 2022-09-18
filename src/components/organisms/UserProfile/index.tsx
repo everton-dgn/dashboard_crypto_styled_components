@@ -1,9 +1,8 @@
+import premium from 'assets/images/premium.webp'
+import * as C from 'components'
 import T from 'theme'
 import * as S from './styles'
-import * as C from 'components'
 import { UserProfileProps } from './types'
-import { ReactComponent as IconOptionsMenu } from 'assets/icons/optionsMenu.svg'
-import premium from 'assets/images/premium.webp'
 
 const UserProfile = ({ userData }: UserProfileProps) => {
   return (
@@ -49,7 +48,7 @@ const UserProfile = ({ userData }: UserProfileProps) => {
           <C.Notification
             hasNewsNotifications={userData.hasNewsNotifications}
           />
-          <C.IconButton icon={<IconOptionsMenu />} ariaLabel="Options menu" />
+          <C.Options />
         </S.WrapperIcons>
       </S.Wrapper>
     </C.CardLayout>

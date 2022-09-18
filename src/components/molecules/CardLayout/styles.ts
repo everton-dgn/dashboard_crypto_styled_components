@@ -36,15 +36,15 @@ export const Header = styled.div`
   height: fit-content;
   margin-bottom: ${T.grid.gutterTablet};
 
-  & > button {
-    transform: translateX(6px);
+  & > div {
+    margin-right: -6px;
   }
 
   ${T.breakpoints.tablet} {
     margin-bottom: ${T.grid.gutterTablet};
 
-    & > button {
-      transform: translateX(10px);
+    & > div {
+      margin-right: -10px;
     }
   }
 

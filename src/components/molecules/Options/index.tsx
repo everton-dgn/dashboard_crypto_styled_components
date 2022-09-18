@@ -10,7 +10,7 @@ const Options = () => {
     })
 
   return (
-    <>
+    <S.Wrapper>
       <C.IconButton
         onClick={toggleComponentMount}
         icon={<IconOptionsMenu />}
@@ -66,7 +66,7 @@ const Options = () => {
           </S.Menu>
         )}
       </S.Container>
-    </>
+    </S.Wrapper>
   )
 }
 

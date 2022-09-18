@@ -85,7 +85,7 @@ export const WrapperIcons = styled.div`
   transform: translateX(6px);
   z-index: ${T.layerOrder.options};
 
-  & > button {
+  & > div:last-child {
     margin-left: ${T.spacings.sm};
   }
 

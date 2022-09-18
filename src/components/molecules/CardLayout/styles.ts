@@ -9,6 +9,7 @@ export const Container = styled.section`
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
   padding: ${T.grid.paddingPhone};
+  position: relative;
 
   ${T.breakpoints.tablet} {
     padding: ${T.grid.paddingTablet};

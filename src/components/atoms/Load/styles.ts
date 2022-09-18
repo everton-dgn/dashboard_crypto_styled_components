@@ -2,14 +2,16 @@ import styled, { css } from 'styled-components'
 import T from 'theme'
 
 export const Container = styled.div<{ size?: number }>`
-  display: flex;
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  justify-content: center;
-  align-items: center;
-
   ${({ size }) => css`
+    display: flex;
+    position: relative;
+    width: ${size || 64}px;
+    min-width: ${size || 64}px;
+    height: ${size || 64}px;
+    min-height: ${size || 64}px;
+    justify-content: center;
+    align-items: center;
+
     & div {
       box-sizing: border-box;
       display: block;

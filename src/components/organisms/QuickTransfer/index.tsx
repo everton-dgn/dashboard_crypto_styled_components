@@ -43,7 +43,7 @@ const QuickTransfer = ({
 
   return (
     <C.CardLayout title="QUICK TRANSFER" optionsMenu={[]}>
-      <S.Wrapper>
+      <S.Wrapper paddingBottom={calculatesWhenToShowTheViewMoreButton()}>
         {quickTransferData
           .slice(0, numberOfItems)
           .map(({ urlImage, name, flagLogo, cardNumber }) => (
@@ -70,25 +70,23 @@ const QuickTransfer = ({
               />
             </S.WrapperUser>
           ))}
-        {calculatesWhenToShowTheViewMoreButton() && (
-          <>
-            <S.WrapperButton>
-              {isLoading ? (
-                <C.Load size={30} />
-              ) : (
-                <C.Button
-                  text="View more"
-                  aria-label="View more"
-                  size="small"
-                  color="primary"
-                  onClick={increaseNumberOfItems}
-                />
-              )}
-            </S.WrapperButton>
-            <S.WrapperViewMore />
-          </>
-        )}
       </S.Wrapper>
+      {calculatesWhenToShowTheViewMoreButton() && (
+        <S.WrapperButton>
+          {isLoading ? (
+            <C.Load size={30} />
+          ) : (
+            <C.Button
+              text="View more"
+              aria-label="View more"
+              size="small"
+              color="primary"
+              onClick={increaseNumberOfItems}
+            />
+          )}
+          <S.WrapperViewMore />
+        </S.WrapperButton>
+      )}
     </C.CardLayout>
   )
 }

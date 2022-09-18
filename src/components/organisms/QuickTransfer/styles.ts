@@ -1,12 +1,17 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import T from 'theme'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ paddingBottom: boolean }>`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: max-content;
   row-gap: ${T.spacings.xm};
   position: relative;
+  ${({ paddingBottom }) =>
+    paddingBottom &&
+    css`
+      padding-bottom: ${T.spacings.lg};
+    `}
 `
 
 export const WrapperUser = styled.div`
@@ -43,18 +48,37 @@ export const WrapperInfoCard = styled.div`
 export const WrapperButton = styled.div`
   display: flex;
   width: 100%;
-  height: 31px;
   justify-content: center;
   margin: -18px auto 0 auto;
   z-index: ${T.layerOrder.base};
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 120px;
+  border-radius: 0 0 ${T.borderRadius.lg} ${T.borderRadius.lg};
+  align-items: end;
+
+  & > *:first-child {
+    z-index: ${T.layerOrder.base};
+    margin-bottom: ${T.grid.paddingPhone};
+
+    ${T.breakpoints.tablet} {
+      margin-bottom: ${T.grid.paddingTablet};
+    }
+
+    ${T.breakpoints.desktop} {
+      margin-bottom: ${T.grid.paddingDesktop};
+    }
+  }
 `
 
 export const WrapperViewMore = styled.span`
   position: absolute;
   background: ${T.colors.blur};
   filter: blur(21px);
-  left: -30px;
-  bottom: -30px;
-  width: calc(100% + 60px);
+  left: 0;
+  bottom: 0;
+  width: 100%;
   height: 100px;
 `

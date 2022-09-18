@@ -10,61 +10,63 @@ const Options = () => {
     })
 
   return (
-    <S.Container>
+    <>
       <C.IconButton
         onClick={toggleComponentMount}
         icon={<IconOptionsMenu />}
         ariaLabel="Options menu"
       />
-      {isMountedComponent && (
-        <S.Menu
-          role="menu"
-          aria-orientation="vertical"
-          startAnimation={isStartAnimation}
-        >
-          <S.Item
-            onClick={toggleComponentMount}
-            role="menuitem"
-            tabIndex={0}
-            aria-label="Options"
+      <S.Container>
+        {isMountedComponent && (
+          <S.Menu
+            role="menu"
+            aria-orientation="vertical"
+            startAnimation={isStartAnimation}
           >
-            Options
-          </S.Item>
-          <S.Item
-            onClick={toggleComponentMount}
-            role="menuitem"
-            tabIndex={0}
-            aria-label="Options"
-          >
-            Options
-          </S.Item>
-          <S.Item
-            onClick={toggleComponentMount}
-            role="menuitem"
-            tabIndex={0}
-            aria-label="Options"
-          >
-            Options
-          </S.Item>
-          <S.Item
-            onClick={toggleComponentMount}
-            role="menuitem"
-            tabIndex={0}
-            aria-label="Options"
-          >
-            Options
-          </S.Item>
-          <S.Item
-            onClick={toggleComponentMount}
-            role="menuitem"
-            tabIndex={0}
-            aria-label="Options"
-          >
-            Options
-          </S.Item>
-        </S.Menu>
-      )}
-    </S.Container>
+            <S.Item
+              onClick={toggleComponentMount}
+              role="menuitem"
+              tabIndex={0}
+              aria-label="Options"
+            >
+              Options
+            </S.Item>
+            <S.Item
+              onClick={toggleComponentMount}
+              role="menuitem"
+              tabIndex={0}
+              aria-label="Options"
+            >
+              Options
+            </S.Item>
+            <S.Item
+              onClick={toggleComponentMount}
+              role="menuitem"
+              tabIndex={0}
+              aria-label="Options"
+            >
+              Options
+            </S.Item>
+            <S.Item
+              onClick={toggleComponentMount}
+              role="menuitem"
+              tabIndex={0}
+              aria-label="Options"
+            >
+              Options
+            </S.Item>
+            <S.Item
+              onClick={toggleComponentMount}
+              role="menuitem"
+              tabIndex={0}
+              aria-label="Options"
+            >
+              Options
+            </S.Item>
+          </S.Menu>
+        )}
+      </S.Container>
+    </>
   )
 }
 

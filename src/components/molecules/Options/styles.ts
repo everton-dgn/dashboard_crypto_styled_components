@@ -14,8 +14,8 @@ export const Menu = styled.div<{ startAnimation: boolean }>`
   display: grid;
   row-gap: 2px;
   position: absolute;
-  top: 25px;
-  right: 0;
+  top: 14px;
+  right: -6px;
   width: fit-content;
   min-width: 140px;
   height: fit-content;
@@ -28,6 +28,10 @@ export const Menu = styled.div<{ startAnimation: boolean }>`
   animation: ${({ startAnimation }) =>
       startAnimation ? T.animations.showOptions : T.animations.hiddenOptions}
     0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+
+  ${T.breakpoints.tablet} {
+    right: -9px;
+  }
 `
 
 export const Item = styled.button`

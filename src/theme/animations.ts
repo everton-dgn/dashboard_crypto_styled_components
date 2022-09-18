@@ -1,4 +1,5 @@
 import { keyframes } from 'styled-components'
+import { breakpoints } from './breakpoints'
 
 export const animations = {
   openSideBar: keyframes`
@@ -31,21 +32,37 @@ export const animations = {
   showOptions: keyframes`
     0% {
       opacity: 0.6;
-      transform: scale(0) translateX(10px);
+      transform: scale(0);
+
+      ${breakpoints.tablet} {
+        transform: scale(0);
+      }
     }
     100% {
       opacity: 1;
-      transform: scale(1) translateX(10px);
+      transform: scale(1);
+
+      ${breakpoints.tablet} {
+        transform: scale(1);
+      }
     }
   `,
   hiddenOptions: keyframes`
     0% {
       opacity: 1;
-      transform: scale(1) translateX(10px);
+      transform: scale(1);
+
+      ${breakpoints.tablet} {
+        transform: scale(1);
+      }
     }
     100% {
       opacity: 0.6;
-      transform: scale(0) translateX(10px);
+      transform: scale(0);
+
+      ${breakpoints.tablet} {
+        transform: scale(0);
+      }
     }
   `,
   rotate: keyframes`

@@ -29,14 +29,14 @@ export const Header = styled.div`
   height: fit-content;
   margin-bottom: ${T.grid.gutterTablet};
 
-  & > div {
+  & > button {
     transform: translateX(6px);
   }
 
   ${T.breakpoints.tablet} {
     margin-bottom: ${T.grid.gutterTablet};
 
-    & > div {
+    & > button {
       transform: translateX(10px);
     }
   }

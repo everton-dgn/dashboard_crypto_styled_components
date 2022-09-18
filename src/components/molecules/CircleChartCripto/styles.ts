@@ -6,7 +6,7 @@ export const Percent = styled.div`
   width: 82px;
   height: 82px;
   border-radius: 50%;
-  z-index: ${T.layerOrder.overlay};
+  z-index: ${T.layerOrder.elevation};
 
   &:before {
     content: '';
@@ -18,7 +18,7 @@ export const Percent = styled.div`
     height: 78px;
     border-radius: 50%;
     background: ${T.colors.gradientOverlay};
-    z-index: ${T.layerOrder.overlay};
+    z-index: ${T.layerOrder.elevation};
   }
 `
 
@@ -32,7 +32,7 @@ export const WrapperCrypto = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: ${T.borderRadius.xl};
-  z-index: ${T.layerOrder.overlay};
+  z-index: ${T.layerOrder.elevation};
 `
 
 export const Svg = styled.svg`

@@ -9,7 +9,6 @@ export const Container = styled.section`
   box-shadow: 0 4px 15px -4px ${T.colors.shadow};
   background: ${T.colors.backgroundCard};
   padding: ${T.grid.paddingPhone};
-  overflow: hidden;
 
   ${T.breakpoints.tablet} {
     padding: ${T.grid.paddingTablet};
@@ -30,14 +29,14 @@ export const Header = styled.div`
   height: fit-content;
   margin-bottom: ${T.grid.gutterTablet};
 
-  button {
+  & > div {
     transform: translateX(6px);
   }
 
   ${T.breakpoints.tablet} {
     margin-bottom: ${T.grid.gutterTablet};
 
-    button {
+    & > div {
       transform: translateX(10px);
     }
   }

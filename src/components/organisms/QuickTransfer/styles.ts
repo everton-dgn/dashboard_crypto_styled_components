@@ -43,6 +43,7 @@ export const WrapperInfoCard = styled.div`
 export const WrapperButton = styled.div`
   display: flex;
   width: 100%;
+  height: 31px;
   justify-content: center;
   margin: -18px auto 0 auto;
   z-index: ${T.layerOrder.base};

@@ -1,5 +1,4 @@
 import { CardLayoutProps } from './types'
-import { ReactComponent as IconOptionsMenu } from 'assets/icons/optionsMenu.svg'
 import * as S from './styles'
 import * as C from 'components'
 
@@ -8,9 +7,7 @@ const CardLayout = ({ title, optionsMenu, children }: CardLayoutProps) => (
     {title && (
       <S.Header>
         <C.Typography text={title} type="text1" as="h1" />
-        {optionsMenu && (
-          <C.IconButton icon={<IconOptionsMenu />} ariaLabel="Options menu" />
-        )}
+        {optionsMenu && <C.Options />}
       </S.Header>
     )}
     {children}

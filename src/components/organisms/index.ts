@@ -8,5 +8,5 @@ export const QuickTransfer = lazy(() => import('./QuickTransfer'))
 export const SemesterChart = lazy(() => import('./SemesterChart'))
 export const StatisticsChart = lazy(() => import('./StatisticsChart'))
 export { default as UserProfile } from './UserProfile'
-export const VerticalMenu = lazy(() => import('./VerticalMenu'))
+export { default as VerticalMenu } from './VerticalMenu'
 export const Wallets = lazy(() => import('./Wallets'))

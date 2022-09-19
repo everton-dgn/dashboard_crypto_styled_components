@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react'
 import * as S from './styles'
-import * as C from 'components'
 import { OptionsProps } from './types'
+import * as C from 'components'
 import { useAnimation } from 'hooks'
 import { ReactComponent as IconOptionsMenu } from 'assets/icons/optionsMenu.svg'
 
@@ -18,6 +18,13 @@ const Options = ({ optionsData }: OptionsProps) => {
     [toggleComponentMount]
   )
 
+  const handleAlternateMenu = useCallback(() => {
+    if (!isMountedComponent) {
+      document.addEventListener('click', handleOutsideClick)
+      return () => document.removeEventListener('click', handleOutsideClick)
+    }
+  }, [handleOutsideClick, isMountedComponent])
+
   useEffect(() => {
     if (isMountedComponent) {
       document.addEventListener('click', handleOutsideClick)
@@ -26,9 +33,9 @@ const Options = ({ optionsData }: OptionsProps) => {
   }, [handleOutsideClick, isMountedComponent])
 
   return (
-    <S.Wrapper onClick={e => e.stopPropagation()}>
+    <S.Wrapper>
       <C.IconButton
-        onClick={toggleComponentMount}
+        onClick={handleAlternateMenu}
         icon={<IconOptionsMenu />}
         ariaLabel="Options menu"
       />
@@ -38,6 +45,7 @@ const Options = ({ optionsData }: OptionsProps) => {
             role="menu"
             aria-orientation="vertical"
             startAnimation={isStartAnimation}
+            onClick={e => e.stopPropagation()}
           >
             {optionsData.map(({ id, text }) => (
               <S.Item

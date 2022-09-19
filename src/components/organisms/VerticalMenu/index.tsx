@@ -15,7 +15,11 @@ const VerticalMenu = ({
   const { windowSize } = useRenderingByWindowSize()
 
   return (
-    <S.Container isOpenMenu={startAnimation} aria-hidden={!isOpenMenu}>
+    <S.Container
+      isOpenMenu={startAnimation}
+      aria-hidden={!isOpenMenu}
+      onClick={e => e.stopPropagation()}
+    >
       <S.Content>
         {windowSize.lg && <C.Logo size="medium" />}
 

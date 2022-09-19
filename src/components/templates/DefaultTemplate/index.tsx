@@ -1,4 +1,4 @@
-import { useAnimation, useRenderingByWindowSize } from 'hooks'
+import { useAnimation, useOutsideClick, useRenderingByWindowSize } from 'hooks'
 import { useCallback } from 'react'
 import { Outlet } from 'react-router-dom'
 import * as S from './styles'
@@ -12,6 +12,10 @@ const DefaultTemplate = () => {
       initialState: false,
       disableHook: windowSize.lg
     })
+  const handleAlternateVisibility = useOutsideClick({
+    isMountedComponent,
+    toggleComponentMount
+  })
 
   const onOpenMenu = useCallback(() => {
     toggleComponentMount()
@@ -19,7 +23,7 @@ const DefaultTemplate = () => {
 
   return (
     <>
-      {!windowSize.lg && <C.TopBar onClick={onOpenMenu} />}
+      {!windowSize.lg && <C.TopBar onClick={handleAlternateVisibility} />}
       <S.Grid>
         {isMountedComponent && (
           <C.VerticalMenu

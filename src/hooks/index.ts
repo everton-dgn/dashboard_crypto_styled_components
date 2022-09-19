@@ -1,5 +1,6 @@
 export * from './useAnimation'
 export * from './useDecrementAnimation'
+export * from './useOutsideClick'
 export * from './useRenderingByWindowSize'
 export * from './useStorage'
 export * from './useSetPageTitle'

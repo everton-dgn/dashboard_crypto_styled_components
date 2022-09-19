@@ -1,4 +1,5 @@
 import { currencyFormatter } from 'data/currencyFormatter'
+import { OPTIONS_DATA } from 'fakeApi'
 import * as S from './styles'
 import * as C from 'components'
 import T from 'theme'
@@ -45,7 +46,11 @@ const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
   const toCurrency = (decimal: number) => currencyFormatter(decimal, 0)
 
   return (
-    <C.CardLayout title="STATISTICS" optionsMenu={[]} overflowHidden={true}>
+    <C.CardLayout
+      title="STATISTICS"
+      optionsMenu={OPTIONS_DATA}
+      overflowHidden={true}
+    >
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           data={chartData}

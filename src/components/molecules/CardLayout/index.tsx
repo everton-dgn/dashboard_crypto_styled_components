@@ -16,7 +16,7 @@ const CardLayout = ({
     {title && (
       <S.Header>
         <C.Typography text={title} type="text1" as="h1" />
-        {optionsMenu && <C.Options />}
+        {optionsMenu && <C.Options optionsData={optionsMenu} />}
       </S.Header>
     )}
     {children}

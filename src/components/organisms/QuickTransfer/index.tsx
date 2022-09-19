@@ -1,6 +1,7 @@
 import { ReactComponent as IconArrowEast } from 'assets/icons/arrowEast.svg'
 import * as C from 'components'
 import { creditCardNumberFormatter } from 'data/creditCardNumberFormatter'
+import { OPTIONS_DATA } from 'fakeApi'
 import { useState } from 'react'
 import T from 'theme'
 import * as S from './styles'
@@ -44,7 +45,7 @@ const QuickTransfer = ({
   return (
     <C.CardLayout
       title="QUICK TRANSFER"
-      optionsMenu={[]}
+      optionsMenu={OPTIONS_DATA}
       positionRelative={true}
     >
       <S.Wrapper paddingBottom={calculatesWhenToShowTheViewMoreButton()}>

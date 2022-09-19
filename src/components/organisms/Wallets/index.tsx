@@ -1,3 +1,4 @@
+import { OPTIONS_DATA } from 'fakeApi'
 import * as S from './styles'
 import * as C from 'components'
 import T from 'theme'
@@ -8,7 +9,7 @@ import { ReactComponent as IconAdd } from 'assets/icons/plus.svg'
 
 const Wallets = ({ wallet, name, flagLogo }: WalletsProps) => {
   return (
-    <C.CardLayout title="WALLETS" optionsMenu={[]}>
+    <C.CardLayout title="WALLETS" optionsMenu={OPTIONS_DATA}>
       <S.Wrapper>
         <S.AddButton icon={<IconAdd />} title="Add" color={T.colors.white} />
         <S.Content>

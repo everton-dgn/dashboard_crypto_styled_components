@@ -1,4 +1,5 @@
 import * as C from 'components'
+import { OPTIONS_DATA } from 'fakeApi'
 import * as S from './styles'
 import {
   NameType,
@@ -46,7 +47,11 @@ const SemesterChart = ({ chartData }: SemesterChartProps) => {
     .reduce((acc, cur) => cur + acc)
 
   return (
-    <C.CardLayout title="SEMESTER" optionsMenu={[]} overflowHidden={true}>
+    <C.CardLayout
+      title="SEMESTER"
+      optionsMenu={OPTIONS_DATA}
+      overflowHidden={true}
+    >
       <S.Wrapper>
         <S.ContentTotalYield>
           <C.VariableValueWithArrowSign

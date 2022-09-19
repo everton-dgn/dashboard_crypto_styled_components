@@ -39,7 +39,6 @@ export const Menu = styled.div<{ startAnimation: boolean }>`
 export const Item = styled.button`
   display: flex;
   width: 100%;
-  color: ${T.colors.textPrimary};
   padding: 6px ${T.spacings.sm};
   cursor: pointer;
   border-radius: ${T.borderRadius.md};
@@ -51,6 +50,9 @@ export const Item = styled.button`
 
   &:hover {
     background: ${T.colors.backgroundHighlight};
-    color: ${T.colors.white};
+
+    span {
+      color: ${T.colors.white};
+    }
   }
 `

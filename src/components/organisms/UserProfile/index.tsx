@@ -1,5 +1,6 @@
 import premium from 'assets/images/premium.webp'
 import * as C from 'components'
+import { OPTIONS_DATA } from 'fakeApi'
 import T from 'theme'
 import * as S from './styles'
 import { UserProfileProps } from './types'
@@ -48,7 +49,7 @@ const UserProfile = ({ userData }: UserProfileProps) => {
           <C.Notification
             hasNewsNotifications={userData.hasNewsNotifications}
           />
-          <C.Options />
+          <C.Options optionsData={OPTIONS_DATA} />
         </S.WrapperIcons>
       </S.Wrapper>
     </C.CardLayout>

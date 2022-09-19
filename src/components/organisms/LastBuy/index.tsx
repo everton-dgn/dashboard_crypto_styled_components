@@ -1,3 +1,4 @@
+import { OPTIONS_DATA } from 'fakeApi'
 import { Fragment } from 'react'
 import * as S from './styles'
 import * as C from 'components'
@@ -6,7 +7,7 @@ import { ReactComponent as AddCriptocurrency } from 'assets/icons/cryptocurrency
 
 const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
   return (
-    <C.CardLayout title="LAST BUY" optionsMenu={[]}>
+    <C.CardLayout title="LAST BUY" optionsMenu={OPTIONS_DATA}>
       <S.Wrapper>
         {dataLastBuy.map(
           ({ currency, isPositive, currentPercentageVariation, icon }) => (

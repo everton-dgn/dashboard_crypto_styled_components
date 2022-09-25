@@ -1,8 +1,10 @@
+import { Outlet } from 'react-router-dom'
 import * as S from './styles'
-import { ErrorProps } from './types'
 
-const ErrorTemplate = ({ children }: ErrorProps) => {
-  return <S.Grid>{children}</S.Grid>
-}
+const ErrorTemplate = () => (
+  <S.Grid>
+    <Outlet />
+  </S.Grid>
+)
 
 export default ErrorTemplate

@@ -7,7 +7,7 @@ const RoutesWrapper = () => (
   <Suspense fallback={<>Loading...</>}>
     <Routes>
       <Route element={<C.DefaultTemplate />}>
-        <Route index element={<Pages.Home />} />
+        <Route path="/" element={<Pages.Home />} />
       </Route>
 
       <Route element={<C.ErrorTemplate />}>

@@ -6,8 +6,8 @@ import * as C from 'components'
 const RoutesWrapper = () => (
   <Suspense fallback={<C.Load />}>
     <Routes>
-      <Route element={<C.DefaultTemplate />}>
-        <Route path="/" element={<Pages.Home />} />
+      <Route path="/" element={<C.DefaultTemplate />}>
+        <Route index element={<Pages.Home />} />
       </Route>
 
       <Route element={<C.ErrorTemplate />}>

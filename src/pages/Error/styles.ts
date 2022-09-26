@@ -17,7 +17,6 @@ export const Container = styled.main`
   padding-top: ${T.grid.paddingPhone};
 
   ${T.breakpoints.tablet} {
-    overflow: visible;
     padding-top: ${T.grid.paddingTablet};
   }
 

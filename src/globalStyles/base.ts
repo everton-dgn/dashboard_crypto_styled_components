@@ -54,7 +54,7 @@ export const GlobalStyles = createGlobalStyle`
   #root {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     min-height: 100vh;
     align-items: center;
     isolation: isolate;

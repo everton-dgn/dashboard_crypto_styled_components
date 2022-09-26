@@ -4,16 +4,13 @@ import * as Pages from 'pages'
 import * as C from 'components'
 
 const RoutesWrapper = () => (
-  <Suspense fallback={<C.Load />}>
+  <Suspense fallback={<>Loading...</>}>
     <Routes>
-      <Route path="/" element={<C.DefaultTemplate />}>
+      <Route element={<C.DefaultTemplate />}>
         <Route index element={<Pages.Home />} />
-        <Route element={<C.ErrorTemplate />}>
-          <Route path="*" element={<Pages.Error />} />
-        </Route>
       </Route>
 
-      <Route element={<C.ErrorTemplate />}>
+      <Route path="/*" element={<C.ErrorTemplate />}>
         <Route path="*" element={<Pages.Error />} />
       </Route>
     </Routes>

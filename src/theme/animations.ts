@@ -2,6 +2,14 @@ import { keyframes } from 'styled-components'
 import { breakpoints } from './breakpoints'
 
 export const animations = {
+  incrementCounter: (percentage: number) => keyframes`
+    0% {
+      stroke-dashoffset: 244;
+    }
+    100% {
+      stroke-dashoffset: ${percentage};
+    }
+  `,
   openSideBar: keyframes`
     0% {
       transform: translate3d(-100%, 0, 0);

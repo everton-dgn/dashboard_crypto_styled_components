@@ -42,7 +42,11 @@ const BoxCircleCryptocurrency = ({
           align="center"
         />
       </S.WrapperText>
-      <C.CircleChartCripto totalPercentage={currentPercent} icon={icon} />
+      <C.CircleChartCripto
+        totalPercentage={totalPercentage}
+        icon={icon}
+        key={name}
+      />
     </S.WrapperBoxCrypto>
   )
 }

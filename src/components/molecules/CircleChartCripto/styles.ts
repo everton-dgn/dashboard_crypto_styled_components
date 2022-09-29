@@ -57,6 +57,8 @@ export const percentCircleWithColor = styled(CircleBase)<{
   colorFillPercentage: number
 }>`
   stroke-dasharray: 244;
-  stroke-dashoffset: ${({ colorFillPercentage }) => colorFillPercentage};
+  animation: ${({ colorFillPercentage }) =>
+      T.animations.incrementCounter(colorFillPercentage)}
+    1.6s ease-out forwards;
   stroke: ${T.colors.primary};
 `

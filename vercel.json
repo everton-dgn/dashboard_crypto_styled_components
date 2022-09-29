@@ -3,6 +3,14 @@
     {
       "source": "/((?!api/.*).*)",
       "destination": "/index.html"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
     }
   ]
 }

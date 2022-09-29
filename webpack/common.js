@@ -24,6 +24,10 @@ module.exports = env => ({
     publicPath: env.publicPath,
     chunkFilename: '[id].[contenthash].js'
   },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  },
   optimization: {
     chunkIds: 'named',
     usedExports: true,

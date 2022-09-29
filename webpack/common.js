@@ -52,7 +52,6 @@ module.exports = env => ({
     open: true,
     devMiddleware: { writeToDisk: true }
   },
-  externalsType: 'commonjs',
   module: {
     rules: [
       {

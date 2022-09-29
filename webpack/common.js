@@ -33,7 +33,6 @@ module.exports = env => ({
     },
     flagIncludedChunks: true
   },
-  externalsType: 'commonjs',
   performance: {
     hints: false
   },
@@ -55,6 +54,20 @@ module.exports = env => ({
   },
   module: {
     rules: [
+      {
+        test: /\.xml/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'sitemap.xml'
+        }
+      },
+      {
+        test: /\.txt/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'robots.txt'
+        }
+      },
       {
         test: /\.js$/,
         enforce: 'pre',

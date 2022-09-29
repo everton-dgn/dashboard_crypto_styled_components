@@ -33,6 +33,7 @@ module.exports = env => ({
     },
     flagIncludedChunks: true
   },
+  externalsType: 'commonjs',
   performance: {
     hints: false
   },

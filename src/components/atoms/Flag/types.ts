@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
+
 export type FlagProps = {
-  image: string
-  altDescription: string
+  image: ReactNode
   isSelected: boolean
   onClick: () => void
 }

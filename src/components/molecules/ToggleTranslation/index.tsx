@@ -2,8 +2,8 @@ import useTranslator from 'translations/useTranslator'
 import { LanguageType } from './types'
 import * as C from 'components'
 import * as S from './styles'
-import BrazilFlag from 'assets/images/brazilFlag.svg'
-import EuaFlag from 'assets/images/euaFlag.svg'
+import { ReactComponent as BrazilFlag } from 'assets/images/brazilFlag.svg'
+import { ReactComponent as EuaFlag } from 'assets/images/euaFlag.svg'
 
 export const ToggleTranslation = () => {
   const { i18n } = useTranslator()
@@ -17,14 +17,12 @@ export const ToggleTranslation = () => {
   return (
     <S.Container>
       <C.Flag
-        image={EuaFlag}
-        altDescription="English"
+        image={<EuaFlag title="English" />}
         isSelected={selectedLanguage !== 'en-US'}
         onClick={() => handleChangeLanguage('en-US')}
       />
       <C.Flag
-        image={BrazilFlag}
-        altDescription="Português"
+        image={<BrazilFlag title="Português" />}
         isSelected={selectedLanguage !== 'pt-BR'}
         onClick={() => handleChangeLanguage('pt-BR')}
       />

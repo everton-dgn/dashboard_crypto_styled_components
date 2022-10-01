@@ -25,7 +25,7 @@ const renderTooltipContent = ({
 }: TooltipProps<ValueType, NameType>) => {
   const verifyType = (entry: Payload<ValueType, NameType>) => {
     return typeof entry.value === 'number'
-      ? currencyFormatter(entry.value)
+      ? currencyFormatter({ value: entry.value })
       : entry.value
   }
 
@@ -56,7 +56,7 @@ const SemesterChart = ({ chartData }: SemesterChartProps) => {
         <S.ContentTotalYield>
           <C.VariableValueWithArrowSign
             isPositive={totalYield > 0}
-            value={`${currencyFormatter(totalYield)}`}
+            value={`${currencyFormatter({ value: totalYield })}`}
             size="large"
             color={T.colors.textPrimary}
           />

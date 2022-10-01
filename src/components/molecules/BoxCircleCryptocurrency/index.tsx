@@ -36,7 +36,7 @@ const BoxCircleCryptocurrency = ({
           color={T.colors.textTertiary}
         />
         <C.Typography
-          text={currencyFormatter(price)}
+          text={currencyFormatter({ value: price })}
           type="text6"
           as="p"
           align="center"

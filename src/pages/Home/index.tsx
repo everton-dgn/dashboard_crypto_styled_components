@@ -1,5 +1,5 @@
 import { useSetPageTitle } from 'hooks'
-import useTranslator from 'translations/useTranslator'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import * as C from 'components'
 import nft from 'assets/images/nft.webp'

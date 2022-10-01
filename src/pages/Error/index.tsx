@@ -1,6 +1,6 @@
 import { useSetPageTitle } from 'hooks'
 import { useNavigate } from 'react-router-dom'
-import useTranslator from 'translations/useTranslator'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import * as C from 'components'
 

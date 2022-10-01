@@ -1,26 +1,28 @@
+import { i18n } from 'translations'
+
 export const CHART_DATA = [
   {
-    month: 'Sep',
+    month: i18n.t('chartData.0'),
     wallet: 28.02
   },
   {
-    month: 'Oct',
+    month: i18n.t('chartData.1'),
     wallet: 19.45
   },
   {
-    month: 'Nov',
+    month: i18n.t('chartData.2'),
     wallet: 24.09
   },
   {
-    month: 'Dec',
+    month: i18n.t('chartData.3'),
     wallet: 35.06
   },
   {
-    month: 'Jan',
+    month: i18n.t('chartData.4'),
     wallet: 38.91
   },
   {
-    month: 'Feb',
+    month: i18n.t('chartData.5'),
     wallet: 49.01
   }
 ]

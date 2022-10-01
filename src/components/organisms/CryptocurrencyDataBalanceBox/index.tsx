@@ -27,7 +27,7 @@ const CryptocurrencyDataBalanceBox = ({
         <S.ContentValues>
           <C.Typography text="Price:" type="text6" as="span" />
           <C.Typography
-            text={currencyFormatter(price)}
+            text={currencyFormatter({ value: price })}
             type="text6"
             as="span"
             color={T.colors.textQuaternary}

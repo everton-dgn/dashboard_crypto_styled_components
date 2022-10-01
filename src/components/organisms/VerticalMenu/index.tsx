@@ -3,6 +3,7 @@ import * as C from 'components'
 import { LIST_MENU_DATA } from 'fakeApi'
 import { useRenderingByWindowSize, useTheme } from 'hooks'
 import T from 'theme'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import { VerticalMenuProps } from './types'
 
@@ -11,14 +12,20 @@ const VerticalMenu = ({
   onOpenMenu,
   startAnimation
 }: VerticalMenuProps) => {
+  const { t } = useTranslator()
   const { setTheme, isDarkMode } = useTheme()
   const { windowSize } = useRenderingByWindowSize()
+
+  const theme = isDarkMode
+    ? t('verticalMenu.themeLight')
+    : t('verticalMenu.themeDark')
+  const labelSwitch = `${t('verticalMenu.switchTheme')} ${theme}`
 
   return (
     <S.Container
       isOpenMenu={startAnimation}
       aria-hidden={!isOpenMenu}
-      onClick={e => e.stopPropagation()}
+      onClick={e => !windowSize.lg && e.stopPropagation()}
     >
       <S.Content>
         {windowSize.lg && <C.Logo size="medium" />}
@@ -29,14 +36,14 @@ const VerticalMenu = ({
       <S.WrapperHelp aria-hidden={!isOpenMenu}>
         <S.WrapperTextHelp>
           <C.Typography
-            text="Need Help?"
+            text={t('verticalMenu.titleHelp')}
             type="text1"
             as="h2"
             align="center"
             weight={500}
           />
           <C.Typography
-            text="Virtual Assistant Will Help You"
+            text={t('verticalMenu.descriptionHelp')}
             type="text5"
             as="p"
             align="center"
@@ -48,7 +55,7 @@ const VerticalMenu = ({
           width={232}
           height={240}
           src={artificialIntelligence}
-          alt="Begin"
+          alt={t('verticalMenu.begin')}
         />
       </S.WrapperHelp>
 
@@ -60,10 +67,10 @@ const VerticalMenu = ({
             id="changeTheme"
             initialValue={isDarkMode}
             onClick={setTheme}
-            ariaLabel={`Switch to ${isDarkMode ? 'light' : 'dark'}`}
+            ariaLabel={labelSwitch}
           />
           <C.Typography
-            text={`Switch to ${isDarkMode ? 'light' : 'dark'}`}
+            text={labelSwitch}
             type="text6"
             as="p"
             color={T.colors.grey}

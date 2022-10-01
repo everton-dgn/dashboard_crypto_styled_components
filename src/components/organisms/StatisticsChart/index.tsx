@@ -1,5 +1,6 @@
 import { currencyFormatter } from 'data/currencyFormatter'
 import { OPTIONS_DATA } from 'fakeApi'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import * as C from 'components'
 import T from 'theme'
@@ -26,7 +27,7 @@ const renderTooltipContent = ({
 }: TooltipProps<ValueType, NameType>) => {
   const verifyType = (entry: Payload<ValueType, NameType>) => {
     return typeof entry.value === 'number'
-      ? currencyFormatter(entry.value)
+      ? currencyFormatter({ value: entry.value })
       : entry.value
   }
 
@@ -43,11 +44,15 @@ const renderTooltipContent = ({
 }
 
 const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
-  const toCurrency = (decimal: number) => currencyFormatter(decimal, 0)
+  const { t } = useTranslator()
+
+  const toCurrency = (decimal: number) => {
+    return currencyFormatter({ value: decimal, setsDecimalPlaces: 0 })
+  }
 
   return (
     <C.CardLayout
-      title="STATISTICS"
+      title={t('statisticsChart.title')}
       optionsMenu={OPTIONS_DATA}
       overflowHidden={true}
     >
@@ -57,7 +62,7 @@ const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
           margin={{
             top: 0,
             right: 5,
-            left: -30,
+            left: -20,
             bottom: -8
           }}
         >

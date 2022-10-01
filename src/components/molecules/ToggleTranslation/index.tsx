@@ -1,4 +1,4 @@
-import useTranslator from 'translations/useTranslator'
+import { useTranslator } from 'translations'
 import { LanguageType } from './types'
 import * as C from 'components'
 import * as S from './styles'

@@ -1,3 +1,4 @@
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import { OptionsProps } from './types'
 import * as C from 'components'
@@ -5,6 +6,7 @@ import { useAnimation, useOutsideClick } from 'hooks'
 import { ReactComponent as IconOptionsMenu } from 'assets/icons/optionsMenu.svg'
 
 const Options = ({ optionsData }: OptionsProps) => {
+  const { t } = useTranslator()
   const { isMountedComponent, toggleComponentMount, isStartAnimation } =
     useAnimation({
       timeInMillisecondsToDisassembleComponent: 200
@@ -19,7 +21,7 @@ const Options = ({ optionsData }: OptionsProps) => {
       <C.IconButton
         onClick={handleAlternateVisibility}
         icon={<IconOptionsMenu />}
-        ariaLabel="Options menu"
+        ariaLabel={t('optionsMenu.description')}
       />
       {isMountedComponent && (
         <S.Container>
@@ -35,9 +37,9 @@ const Options = ({ optionsData }: OptionsProps) => {
                 onClick={toggleComponentMount}
                 role="menuitem"
                 tabIndex={0}
-                aria-label={text}
+                aria-label={text()}
               >
-                <C.Typography text={text} type="text5" as="span" />
+                <C.Typography text={text()} type="text5" as="span" />
               </S.Item>
             ))}
           </S.Menu>

@@ -1,12 +1,17 @@
-export const currencyFormatter = (
-  value: number,
-  setsDecimalPlaces?: number
-): string => {
-  const currency = new Intl.NumberFormat('en-US', {
+import { i18n } from 'translations'
+import { CurrencyFormatterProps } from './types'
+
+export const currencyFormatter = ({
+  value,
+  setsDecimalPlaces
+}: CurrencyFormatterProps): string => {
+  const language = i18n.t('language')
+  const currency = i18n.t('currency')
+  const currentCurrency = new Intl.NumberFormat(language, {
     style: 'currency',
-    currency: 'USD',
+    currency,
     minimumFractionDigits: setsDecimalPlaces ?? 2,
     maximumFractionDigits: setsDecimalPlaces ?? 2
   })
-  return currency.format(value)
+  return currentCurrency.format(value)
 }

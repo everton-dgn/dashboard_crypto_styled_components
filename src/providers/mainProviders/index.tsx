@@ -2,7 +2,7 @@ import { GlobalStyles } from 'globalStyles'
 import * as C from 'components'
 import { ThemeProviders } from '../themeProviders'
 import { MainProvidersProps } from './types'
-import 'translations'
+import 'translations/i18n'
 
 export const MainProviders = ({ children, setTheme }: MainProvidersProps) => {
   if (setTheme) document.body.dataset.theme = setTheme

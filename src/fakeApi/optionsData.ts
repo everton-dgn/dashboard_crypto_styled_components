@@ -1,18 +1,20 @@
+import { i18n } from 'translations'
+
 export const OPTIONS_DATA = [
   {
     id: 121245,
-    text: 'Option 1'
+    text: () => i18n.t('optionsMenu.list.0')
   },
   {
     id: 675667,
-    text: 'Option 2'
+    text: () => i18n.t('optionsMenu.list.1')
   },
   {
     id: 321099,
-    text: 'Option 3'
+    text: () => i18n.t('optionsMenu.list.2')
   },
   {
     id: 294856,
-    text: 'Option 4'
+    text: () => i18n.t('optionsMenu.list.3')
   }
 ]

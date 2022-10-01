@@ -33,7 +33,7 @@ export const NavLink = styled(Link)<{ active: 'true' | 'false' }>`
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 1px ${T.colors.focus};
+    box-shadow: 0 0 0 2px ${T.colors.focus};
   }
 
   svg {

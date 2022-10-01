@@ -1,10 +1,12 @@
 import { useSetPageTitle } from 'hooks'
 import { useNavigate } from 'react-router-dom'
+import useTranslator from 'translations/useTranslator'
 import * as S from './styles'
 import * as C from 'components'
 
 const Error = () => {
-  useSetPageTitle({ pageTitle: 'Error Page' })
+  const { t } = useTranslator()
+  useSetPageTitle({ pageTitle: t('pages.error.titlePage') })
   const navigate = useNavigate()
 
   const handleRedirectHomePage = () => {
@@ -14,11 +16,11 @@ const Error = () => {
   return (
     <S.Container role="main">
       <S.WrapperContent>
-        <S.ImageError404 title="404 Error" />
+        <S.ImageError404 title={t('pages.error.titleImageError404')} />
         <S.WrapperButton>
           <C.Button
-            text="Go to Home Page"
-            aria-label="Go to Home Page"
+            text={t('pages.error.buttonReturn')}
+            aria-label={t('pages.error.buttonReturn')}
             size="large"
             color="primary"
             onClick={handleRedirectHomePage}
@@ -26,7 +28,7 @@ const Error = () => {
           />
         </S.WrapperButton>
       </S.WrapperContent>
-      <S.ImageNotFoundRobot title="Broken robot" />
+      <S.ImageNotFoundRobot title={t('pages.error.titleImageNotFoundRobot')} />
     </S.Container>
   )
 }

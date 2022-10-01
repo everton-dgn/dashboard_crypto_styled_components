@@ -1,4 +1,5 @@
 import { useSetPageTitle } from 'hooks'
+import useTranslator from 'translations/useTranslator'
 import * as S from './styles'
 import * as C from 'components'
 import nft from 'assets/images/nft.webp'
@@ -10,7 +11,8 @@ import {
 } from 'fakeApi'
 
 const Home = () => {
-  useSetPageTitle({ pageTitle: 'Home' })
+  const { t } = useTranslator()
+  useSetPageTitle({ pageTitle: t('pages.home.titlePage') })
 
   return (
     <S.Container>

@@ -6,10 +6,10 @@ export const Button = styled.button<{ color?: string; size?: string }>`
   place-content: center;
   border-radius: ${T.borderRadius.sm};
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 
   &:focus {
-    border: 1px solid ${T.colors.focus};
+    border: 2px solid ${T.colors.focus};
   }
 
   ${({ color, size }) => css`

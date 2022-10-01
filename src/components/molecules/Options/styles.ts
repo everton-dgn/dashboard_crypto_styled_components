@@ -45,7 +45,7 @@ export const Item = styled.button`
   background: transparent;
 
   &:focus {
-    box-shadow: 0 0 0 1px ${T.colors.focus};
+    box-shadow: 0 0 0 2px ${T.colors.focus};
   }
 
   &:hover {

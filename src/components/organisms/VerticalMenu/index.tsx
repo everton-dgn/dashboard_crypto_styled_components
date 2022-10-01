@@ -53,6 +53,8 @@ const VerticalMenu = ({
       </S.WrapperHelp>
 
       <S.WrapperTextFooter>
+        <C.ToggleTranslation />
+
         <S.WrapperSwitch>
           <C.Switch
             id="changeTheme"

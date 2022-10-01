@@ -14,6 +14,6 @@ export const WrapperButton = styled.div`
   left: ${T.spacings.sm};
 
   button:focus {
-    border: 1px solid ${T.colors.white};
+    border: 2px solid ${T.colors.white};
   }
 `

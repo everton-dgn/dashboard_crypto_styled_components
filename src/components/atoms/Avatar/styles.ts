@@ -34,7 +34,7 @@ export const Wrapper = styled.div<{ size: Sizes }>`
   ${({ size }) => sizes[size]}
 `
 
-export const Image = styled.img`
+export const Image = styled.img<{ isSelected?: boolean }>`
   display: block;
   width: 49px;
   height: 49px;

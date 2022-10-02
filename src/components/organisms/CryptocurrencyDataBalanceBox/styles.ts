@@ -3,7 +3,7 @@ import T from 'theme'
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
   grid-auto-flow: row;
   align-items: center;
   gap: ${T.spacings.md};

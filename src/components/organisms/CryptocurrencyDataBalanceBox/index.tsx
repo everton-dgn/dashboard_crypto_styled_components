@@ -19,7 +19,7 @@ const CryptocurrencyDataBalanceBox = ({
   } = cryptocurrencyDataBalance
 
   return (
-    <C.CardLayout>
+    <C.CardLayout overflowHidden={true}>
       <S.Wrapper>
         <S.WrapperCrypto>
           <C.BoxIconCrypto svgIcon={icon} />

@@ -1,6 +1,6 @@
 type OptionItems = {
   id: number
-  text: () => string
+  text: string
 }
 
 export type OptionsProps = {

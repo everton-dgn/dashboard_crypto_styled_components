@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
 type ListItemsType = {
-  text: () => string
+  text: string
   icon: ReactNode
   route: string
 }

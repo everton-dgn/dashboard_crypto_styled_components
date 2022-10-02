@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components'
 import T from 'theme'
 
 export const ButtonFlag = styled.button<{ isSelected: boolean }>`
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   overflow: hidden;
   border-radius: ${T.borderRadius.xl};
   transition: transform 0.2s ease-in-out;

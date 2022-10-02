@@ -8,5 +8,5 @@ export const USER_DATA = {
   hasNewsNotifications: true,
   urlImage: userAvatar,
   wallet: 8_900.0,
-  flagLogo: <Visa title="visa" />
+  flagLogo: <Visa title="Visa" />
 }

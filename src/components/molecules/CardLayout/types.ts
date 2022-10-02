@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 type OptionsMenuItems = {
   id: number
-  text: () => string
+  text: string
 }
 
 export type CardLayoutProps = {

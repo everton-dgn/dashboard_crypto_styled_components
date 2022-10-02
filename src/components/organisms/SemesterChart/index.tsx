@@ -1,5 +1,6 @@
 import * as C from 'components'
 import { OPTIONS_DATA } from 'fakeApi'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import {
   NameType,
@@ -19,10 +20,12 @@ import {
 } from 'recharts'
 import T from 'theme'
 
-const renderTooltipContent = ({
+const RenderTooltipContent = ({
   payload,
   label
 }: TooltipProps<ValueType, NameType>) => {
+  const { t } = useTranslator()
+
   const verifyType = (entry: Payload<ValueType, NameType>) => {
     return typeof entry.value === 'number'
       ? currencyFormatter({ value: entry.value })
@@ -34,7 +37,7 @@ const renderTooltipContent = ({
       <S.TooltipItem>{label}</S.TooltipItem>
       {payload?.map((entry, i) => (
         <S.TooltipItem key={`${i}-${entry.value}`}>
-          {`${entry.name}: ${verifyType(entry)}`}
+          {`${t('semesterChart.wallet')}: ${verifyType(entry)}`}
         </S.TooltipItem>
       ))}
     </S.ContainerTooltip>
@@ -42,14 +45,16 @@ const renderTooltipContent = ({
 }
 
 const SemesterChart = ({ chartData }: SemesterChartProps) => {
+  const { t } = useTranslator()
+
   const totalYield: number = chartData
     .map(({ wallet }) => wallet)
     .reduce((acc, cur) => cur + acc)
 
   return (
     <C.CardLayout
-      title="SEMESTER"
-      optionsMenu={OPTIONS_DATA}
+      title={t('semesterChart.title')}
+      optionsMenu={OPTIONS_DATA()}
       overflowHidden={true}
     >
       <S.Wrapper>
@@ -97,7 +102,7 @@ const SemesterChart = ({ chartData }: SemesterChartProps) => {
               strokeWidth={0.3}
               fontSize={10}
             />
-            <Tooltip content={renderTooltipContent} />
+            <Tooltip content={RenderTooltipContent} />
             <Area
               type="linear"
               dataKey="wallet"

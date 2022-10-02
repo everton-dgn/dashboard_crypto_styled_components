@@ -1,5 +1,6 @@
 import { currencyFormatter } from 'data/currencyFormatter'
 import T from 'theme'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import * as C from 'components'
 import { CryptocurrencyDataBalanceBoxProps } from './types'
@@ -7,6 +8,7 @@ import { CryptocurrencyDataBalanceBoxProps } from './types'
 const CryptocurrencyDataBalanceBox = ({
   cryptocurrencyDataBalance
 }: CryptocurrencyDataBalanceBoxProps) => {
+  const { t } = useTranslator()
   const {
     icon,
     currency,
@@ -25,7 +27,11 @@ const CryptocurrencyDataBalanceBox = ({
         </S.WrapperCrypto>
 
         <S.ContentValues>
-          <C.Typography text="Price:" type="text6" as="span" />
+          <C.Typography
+            text={t('cryptocurrencyDataBalanceBox.price')}
+            type="text6"
+            as="span"
+          />
           <C.Typography
             text={currencyFormatter({ value: price })}
             type="text6"
@@ -53,7 +59,11 @@ const CryptocurrencyDataBalanceBox = ({
           />
         </S.ContentValues>
 
-        <C.Typography text="Last 7 days:" type="text6" as="span" />
+        <C.Typography
+          text={t('cryptocurrencyDataBalanceBox.last7Days')}
+          type="text6"
+          as="span"
+        />
 
         <C.MiniIncomeChart isPositive={isPositive} />
       </S.Wrapper>

@@ -30,7 +30,7 @@ const VerticalMenu = ({
       <S.Content>
         {windowSize.lg && <C.Logo size="medium" />}
 
-        <C.MenuList onOpenMenu={onOpenMenu} dataListMenu={LIST_MENU_DATA} />
+        <C.MenuList onOpenMenu={onOpenMenu} dataListMenu={LIST_MENU_DATA()} />
       </S.Content>
 
       <S.WrapperHelp aria-hidden={!isOpenMenu}>
@@ -55,6 +55,7 @@ const VerticalMenu = ({
           width={232}
           height={240}
           src={artificialIntelligence}
+          title={t('verticalMenu.begin')}
           alt={t('verticalMenu.begin')}
         />
       </S.WrapperHelp>

@@ -1,10 +1,19 @@
+import { Fragment } from 'react'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import * as C from 'components'
 import { MainBannerProps } from './types'
 import T from 'theme'
 import { useRenderingByWindowSize } from 'hooks'
 
-const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
+const MainBanner = ({
+  title,
+  subtitle,
+  textButton,
+  srcImage,
+  altDescription
+}: MainBannerProps) => {
+  const { t } = useTranslator()
   const { windowSize } = useRenderingByWindowSize()
   const calculatesImageOpacity = (): number => {
     if (windowSize.custom(1330)) return 1
@@ -18,11 +27,14 @@ const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
   return (
     <S.Container>
       <S.Wrapper>
-        <C.SearchBar placeholder="Search" ariaLabel="Search" />
+        <C.SearchBar
+          placeholder={t('mainBanner.placeholder')}
+          ariaLabel={t('mainBanner.placeholder')}
+        />
 
         <S.WrapperText>
           <C.Typography
-            text="EARNING WITH NFT TODAY"
+            text={title}
             type="text1"
             as="h1"
             weight={500}
@@ -30,24 +42,21 @@ const MainBanner = ({ srcImage, altDescription }: MainBannerProps) => {
           />
 
           <S.WrapperSubtitle>
-            <C.Typography
-              text="+134 000 Users"
-              type="text5"
-              as="h2"
-              weight={500}
-              color={T.colors.primary}
-            />
-            <C.Typography
-              text="+245 122 Auction"
-              type="text5"
-              as="h2"
-              weight={500}
-              color={T.colors.primary}
-            />
+            {subtitle.map(subtitle => (
+              <Fragment key={subtitle}>
+                <C.Typography
+                  text={subtitle}
+                  type="text5"
+                  as="h2"
+                  weight={500}
+                  color={T.colors.primary}
+                />
+              </Fragment>
+            ))}
           </S.WrapperSubtitle>
         </S.WrapperText>
 
-        <C.Button text="Start Earning" size="large" color="primary" />
+        <C.Button text={textButton} size="large" color="primary" />
       </S.Wrapper>
 
       <S.ImageNft

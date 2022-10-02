@@ -1,13 +1,16 @@
 import { OPTIONS_DATA } from 'fakeApi'
 import { Fragment } from 'react'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import * as C from 'components'
 import { LastBuyProps } from './types'
 import { ReactComponent as AddCriptocurrency } from 'assets/icons/cryptocurrency/addCryptocurrency.svg'
 
 const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
+  const { t } = useTranslator()
+
   return (
-    <C.CardLayout title="LAST BUY" optionsMenu={OPTIONS_DATA}>
+    <C.CardLayout title={t('lastBuy.title')} optionsMenu={OPTIONS_DATA()}>
       <S.Wrapper>
         {dataLastBuy.map(
           ({ currency, isPositive, currentPercentageVariation, icon }) => (
@@ -36,7 +39,8 @@ const LastBuy = ({ dataLastBuy }: LastBuyProps) => {
           icon={
             <C.BoxIconCrypto svgIcon={<AddCriptocurrency />} noMove={true} />
           }
-          ariaLabel="Add cryptocurrency"
+          ariaLabel={t('lastBuy.buttonAddCryptocurrency')}
+          title={t('lastBuy.buttonAddCryptocurrency')}
           size="30px"
         />
       </S.Wrapper>

@@ -49,7 +49,7 @@ const UserProfile = ({ userData }: UserProfileProps) => {
           <C.Notification
             hasNewsNotifications={userData.hasNewsNotifications}
           />
-          <C.Options optionsData={OPTIONS_DATA} />
+          <C.Options optionsData={OPTIONS_DATA()} />
         </S.WrapperIcons>
       </S.Wrapper>
     </C.CardLayout>

@@ -21,10 +21,12 @@ import {
   TooltipProps
 } from 'recharts'
 
-const renderTooltipContent = ({
+const RenderTooltipContent = ({
   payload,
   label
 }: TooltipProps<ValueType, NameType>) => {
+  const { t } = useTranslator()
+
   const verifyType = (entry: Payload<ValueType, NameType>) => {
     return typeof entry.value === 'number'
       ? currencyFormatter({ value: entry.value })
@@ -36,7 +38,7 @@ const renderTooltipContent = ({
       <S.TooltipItem>{label}</S.TooltipItem>
       {payload?.map((entry, i) => (
         <S.TooltipItem key={`${i}-${entry.value}`}>
-          {`${entry.name}: ${verifyType(entry)}`}
+          {`${t('statisticsChart.wallet')}: ${verifyType(entry)}`}
         </S.TooltipItem>
       ))}
     </S.ContainerTooltip>
@@ -53,7 +55,7 @@ const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
   return (
     <C.CardLayout
       title={t('statisticsChart.title')}
-      optionsMenu={OPTIONS_DATA}
+      optionsMenu={OPTIONS_DATA()}
       overflowHidden={true}
     >
       <ResponsiveContainer width="100%" height="100%">
@@ -99,7 +101,7 @@ const StatisticsChart = ({ chartData }: StatisticsChartProps) => {
             strokeWidth={0.3}
             fontSize={10}
           />
-          <Tooltip content={renderTooltipContent} />
+          <Tooltip content={RenderTooltipContent} />
           <Area
             type="linear"
             dataKey="wallet"

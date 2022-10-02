@@ -4,6 +4,7 @@ import { creditCardNumberFormatter } from 'data/creditCardNumberFormatter'
 import { OPTIONS_DATA } from 'fakeApi'
 import { useState } from 'react'
 import T from 'theme'
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import { QuickTransferProps } from './types'
 
@@ -14,6 +15,7 @@ const QuickTransfer = ({
 }: QuickTransferProps) => {
   const [numberOfItems, setNumberOfItems] = useState(initialState)
   const [isLoading, setIsLoading] = useState(false)
+  const { t } = useTranslator()
 
   const isEntireListIsDisplayed = () => {
     return numberOfItems === quickTransferData.length
@@ -44,8 +46,8 @@ const QuickTransfer = ({
 
   return (
     <C.CardLayout
-      title="QUICK TRANSFER"
-      optionsMenu={OPTIONS_DATA}
+      title={t('quickTransfer.title')}
+      optionsMenu={OPTIONS_DATA()}
       positionRelative={true}
     >
       <S.Wrapper paddingBottom={calculatesWhenToShowTheViewMoreButton()}>
@@ -70,7 +72,7 @@ const QuickTransfer = ({
 
               <C.IconButton
                 icon={<IconArrowEast />}
-                ariaLabel="viewMore"
+                ariaLabel={t('quickTransfer.goToTransferButton')}
                 color={T.colors.grey}
               />
             </S.WrapperUser>
@@ -82,8 +84,8 @@ const QuickTransfer = ({
             <C.Load size={30} />
           ) : (
             <C.Button
-              text="View more"
-              aria-label="View more"
+              text={t('quickTransfer.viewMoreButton')}
+              aria-label={t('quickTransfer.viewMoreButton')}
               size="small"
               color="primary"
               onClick={increaseNumberOfItems}

@@ -17,10 +17,19 @@ const Home = () => {
   return (
     <S.Container>
       <S.MainLayout>
-        <C.MainBanner srcImage={nft} altDescription="NFT" />
+        <C.MainBanner
+          title={t('pages.home.titleBanner')}
+          subtitle={[
+            t('pages.home.subtitleBanner.0'),
+            t('pages.home.subtitleBanner.1')
+          ]}
+          textButton={t('pages.home.textButtonBanner')}
+          srcImage={nft}
+          altDescription="NFT"
+        />
         <C.LastBuy dataLastBuy={CRYPTO_DATA} />
         <S.WrapperCharts>
-          <C.StatisticsChart chartData={CHART_DATA} />
+          <C.StatisticsChart chartData={CHART_DATA()} />
           <C.AnalyticsChart dataAnalytics={CRYPTO_DATA} />
         </S.WrapperCharts>
         {CRYPTO_DATA.map(cryptoData => (
@@ -42,7 +51,7 @@ const Home = () => {
           increment={3}
           quickTransferData={QUICK_TRANSFER_DATA}
         />
-        <C.SemesterChart chartData={CHART_DATA} />
+        <C.SemesterChart chartData={CHART_DATA()} />
       </S.SecondaryLayout>
     </S.Container>
   )

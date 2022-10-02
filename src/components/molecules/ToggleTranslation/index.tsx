@@ -6,7 +6,7 @@ import { ReactComponent as BrazilFlag } from 'assets/images/brazilFlag.svg'
 import { ReactComponent as EuaFlag } from 'assets/images/euaFlag.svg'
 
 export const ToggleTranslation = () => {
-  const { i18n } = useTranslator()
+  const { t, i18n } = useTranslator()
 
   const handleChangeLanguage = (language: LanguageType) => {
     i18n?.changeLanguage(language)
@@ -17,12 +17,14 @@ export const ToggleTranslation = () => {
   return (
     <S.Container>
       <C.Flag
-        image={<EuaFlag title="English" />}
+        image={<EuaFlag />}
+        title={t('toggleTranslation.languages.0')}
         isSelected={selectedLanguage !== 'en-US'}
         onClick={() => handleChangeLanguage('en-US')}
       />
       <C.Flag
-        image={<BrazilFlag title="Português" />}
+        image={<BrazilFlag />}
+        title={t('toggleTranslation.languages.1')}
         isSelected={selectedLanguage !== 'pt-BR'}
         onClick={() => handleChangeLanguage('pt-BR')}
       />

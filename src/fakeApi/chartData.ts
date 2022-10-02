@@ -1,6 +1,6 @@
 import { i18n } from 'translations'
 
-export const CHART_DATA = [
+export const CHART_DATA = () => [
   {
     month: i18n.t('chartData.0'),
     wallet: 28.02

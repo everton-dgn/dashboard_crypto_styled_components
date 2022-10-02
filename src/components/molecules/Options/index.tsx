@@ -22,6 +22,7 @@ const Options = ({ optionsData }: OptionsProps) => {
         onClick={handleAlternateVisibility}
         icon={<IconOptionsMenu />}
         ariaLabel={t('optionsMenu.description')}
+        title={t('optionsMenu.description')}
       />
       {isMountedComponent && (
         <S.Container>
@@ -37,9 +38,9 @@ const Options = ({ optionsData }: OptionsProps) => {
                 onClick={toggleComponentMount}
                 role="menuitem"
                 tabIndex={0}
-                aria-label={text()}
+                aria-label={text}
               >
-                <C.Typography text={text()} type="text5" as="span" />
+                <C.Typography text={text} type="text5" as="span" />
               </S.Item>
             ))}
           </S.Menu>

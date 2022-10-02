@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-export type FlagProps = {
+export type FlagProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   image: ReactNode
   isSelected: boolean
   onClick: () => void

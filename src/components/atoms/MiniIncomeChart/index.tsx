@@ -1,19 +1,24 @@
+import { useTranslator } from 'translations'
 import * as S from './styles'
 import { MiniIncomeChartProps } from './types'
 import chartRed from 'assets/images/chartRed.webp'
 import chartGreen from 'assets/images/chartGreen.webp'
 
 const MiniIncomeChart = ({ isPositive }: MiniIncomeChartProps) => {
+  const { t } = useTranslator()
+
   const chartImage = isPositive ? chartGreen : chartRed
-  const chartColor = isPositive ? 'Green' : 'Red'
-  const chartType = isPositive ? 'gain' : 'loss'
+  const status = isPositive
+    ? t('miniIncomeChart.imageGraphDescription.1')
+    : t('miniIncomeChart.imageGraphDescription.0')
 
   return (
     <S.Image
       width={105}
       height={30}
       src={chartImage}
-      alt={`${chartColor} graph indicating ${chartType}`}
+      title={status}
+      alt={status}
     />
   )
 }

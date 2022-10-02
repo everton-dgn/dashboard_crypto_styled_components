@@ -17,7 +17,7 @@ const MenuList = ({ dataListMenu, onOpenMenu }: MenuListProps) => {
   return (
     <S.NavList role="menu" aria-orientation="vertical">
       {dataListMenu.map(({ text, icon, route }, i) => (
-        <S.Item key={text()} role="menuitem">
+        <S.Item key={text} role="menuitem">
           <S.NavLink
             to={route}
             active={`${activeItem === i}`}
@@ -28,7 +28,7 @@ const MenuList = ({ dataListMenu, onOpenMenu }: MenuListProps) => {
           >
             {icon}
             <C.Typography
-              text={text()}
+              text={text}
               type="text3"
               color={T.colors.textPrimary}
               weight={400}

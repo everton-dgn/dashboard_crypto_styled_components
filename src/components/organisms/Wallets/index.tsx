@@ -12,7 +12,7 @@ const Wallets = ({ wallet, name, flagLogo }: WalletsProps) => {
   const { t } = useTranslator()
 
   return (
-    <C.CardLayout title={t('wallets.title')} optionsMenu={OPTIONS_DATA}>
+    <C.CardLayout title={t('wallets.title')} optionsMenu={OPTIONS_DATA()}>
       <S.Wrapper>
         <S.AddButton
           icon={<IconAdd />}

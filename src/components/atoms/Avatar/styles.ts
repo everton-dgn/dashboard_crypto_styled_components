@@ -26,8 +26,6 @@ const sizes = {
 export const Wrapper = styled.div<{ size: Sizes }>`
   display: grid;
   place-content: center;
-  width: 52px;
-  height: 52px;
   background-color: ${T.colors.lightGrey};
   border-radius: ${T.borderRadius.xl};
   background-image: ${T.colors.backgroundHighlight};
@@ -36,8 +34,6 @@ export const Wrapper = styled.div<{ size: Sizes }>`
 
 export const Image = styled.img<{ isSelected?: boolean }>`
   display: block;
-  width: 49px;
-  height: 49px;
   object-fit: cover;
   border-radius: ${T.borderRadius.xl};
 `

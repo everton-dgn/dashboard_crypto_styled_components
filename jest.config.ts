@@ -1,4 +1,7 @@
-module.exports = {
+// eslint-disable-next-line jest/no-jest-import
+import type { Config } from 'jest'
+
+const config: Config = {
   testEnvironment: 'jest-environment-jsdom',
   collectCoverage: true,
   fakeTimers: {
@@ -29,7 +32,8 @@ module.exports = {
   roots: ['<rootDir>/src'],
   testRegex: '(/__tests__/.*|(\\.|/)(test))\\.tsx?$',
   moduleNameMapper: {
-    '^.+\\.svg$': '<rootDir>/src/testHelpers/mocks/svg.ts'
+    '^.+\\.svg$': '<rootDir>/src/testHelpers/mocks/fileMock.ts',
+    '\\.webp$': '<rootDir>/src/testHelpers/mocks/assetsTransformer.ts'
   },
   transform: {
     '^.+\\.tsx?$': [
@@ -46,3 +50,5 @@ module.exports = {
   //  }
   // }
 }
+
+export default config

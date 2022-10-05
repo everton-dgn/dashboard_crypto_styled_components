@@ -109,7 +109,7 @@ module.exports = env => ({
         use: ['@svgr/webpack']
       },
       {
-        test: /\.(webp|png|jpg|svg|gif)$/i,
+        test: /\.(webp|svg)$/i,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'

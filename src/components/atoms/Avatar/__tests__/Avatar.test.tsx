@@ -27,6 +27,6 @@ describe('[Component] Avatar', () => {
   it('should render a default image of urlImage is false', () => {
     renderWithProviders(<Avatar name="valid_name" urlImage="" size="large" />)
     const img = screen.getByRole('img', { name: 'valid_name' })
-    expect(img).toHaveAttribute('src', 'assetsMock')
+    expect(img).toHaveAttribute('src', 'defaultAvatar.webp')
   })
 })

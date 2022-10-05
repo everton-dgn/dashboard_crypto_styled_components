@@ -32,14 +32,14 @@ const config: Config = {
   roots: ['<rootDir>/src'],
   testRegex: '(/__tests__/.*|(\\.|/)(test))\\.tsx?$',
   moduleNameMapper: {
-    '^.+\\.svg$': '<rootDir>/src/testHelpers/mocks/fileMock.ts',
-    '\\.webp$': '<rootDir>/src/testHelpers/mocks/assetsTransformer.ts'
+    '^.+\\.svg$': '<rootDir>/src/testHelpers/mocks/fileMock.ts'
   },
   transform: {
     '^.+\\.tsx?$': [
       '@swc/jest',
       { jsc: { transform: { react: { runtime: 'automatic' } } } }
-    ]
+    ],
+    '\\.(webp|svg)$': '<rootDir>/src/testHelpers/mocks/assetsTransformer.js'
   }
   // coverageThreshold: {
   //  global: {

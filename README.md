@@ -12,6 +12,8 @@
 
 <h1 align="center">Project Crypto System</h1>
 
+[![Project Crypto System](https://img.youtube.com/vi/VFmpAO5eDTk/maxresdefault.jpg)](https://www.youtube.com/watch?v=VFmpAO5eDTk)
+
 <br />
 
 ---
